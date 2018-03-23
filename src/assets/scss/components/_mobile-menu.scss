@@ -1,0 +1,40 @@
+.mobile-menu {
+       
+
+        .is-active > a {
+
+            background-color: lighten( $nav-hover-bg, 20% );
+            position: relative;
+            box-shadow: 0 5px 5px $nav-separator ;               
+                
+            }
+            
+            
+        li{
+            
+            
+            
+            a{
+            
+            color: white;
+            transition: all .3s;
+            display: block;
+            padding-left: .2rem;
+
+            &:hover {
+                background-color: $nav-hover-bg;
+                color: lighten($primary-color, 30%);
+
+                
+                }
+
+            
+            }
+
+            
+        }
+}
+
+.a-title {
+    background-color: $nav-bg-darker;
+}

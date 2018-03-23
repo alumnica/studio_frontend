@@ -1,22 +1,21 @@
-$accordion-bg: #4d5158;
-$accordion-separator: #41444a;
-$accordion-hover-bg: #35383d;
+
 
 .sidebar-menu{
-    @include xy-cell(15%);
+    @include xy-cell(17%);
     margin: 0;
-    background-color: $accordion-bg;
+    background-color: $nav-bg;
     padding-top: 1rem;
-    box-shadow: inset -10px 0 10px $accordion-separator;
+    box-shadow: inset -10px 0 10px $nav-separator;
     position: relative;
+    height: 100vh;
 
     &__ul {
         
         .is-active > a {
 
-            background-color: lighten( $accordion-hover-bg, 20% );
+            background-color: lighten( $nav-hover-bg, 20% );
             position: relative;
-            box-shadow: 0 5px 5px $accordion-separator ;
+            box-shadow: 0 5px 5px $nav-separator ;
 
             &:after{
                 content: '';
@@ -47,7 +46,7 @@ $accordion-hover-bg: #35383d;
             padding-left: .2rem;
 
             &:hover {
-                background-color: $accordion-hover-bg;
+                background-color: $nav-hover-bg;
                 color: lighten($primary-color, 30%);
 
                 
@@ -72,7 +71,7 @@ $accordion-hover-bg: #35383d;
             transition: all .3s;
     
             &:hover {
-                background-color: $accordion-hover-bg;
+                background-color: $nav-hover-bg;
                 color: tomato;
 
                 
@@ -97,6 +96,6 @@ $accordion-hover-bg: #35383d;
 
 
 
-.m-text{
+// .m-text{
    
-}
+// }

@@ -62,6 +62,19 @@
 
 @import 'util/util';
 
+$primary-color: #1779ba;
+$secondary-color: #767676;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #cc4b37;
+
+
+$nav-bg: #4d5158;
+$nav-bg-darker: #31343A;
+$nav-bg-darkest: #191D25;
+$nav-separator: #41444a;
+$nav-hover-bg: #35383d;
+
 
 // 1. Global
 // ---------
@@ -500,7 +513,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
+$offcanvas-background: $nav-bg;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
@@ -820,7 +833,7 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $nav-bg-darker;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -846,8 +859,8 @@ $tooltip-radius: $global-radius;
 // 55. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: 0.2rem .5rem;
+$topbar-background: $nav-bg-darker;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
