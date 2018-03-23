@@ -1,4 +1,9 @@
 .mobile-menu {
+
+    .close-button {
+        $closebutton-color: $white;
+        $closebutton-color-hover: $light-gray;
+    }
        
 
         .is-active > a {

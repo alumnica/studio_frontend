@@ -1,0 +1,44 @@
+.panel{
+    border: solid 1px $blue-gray;
+    border-radius: 2px;
+    padding: 1rem;
+    background-color: $white;
+    
+    
+
+    &__title{
+        width: 100%;
+        font-size: 1.1rem;
+        color: darken($primary-color, 20%);
+        border-bottom: 2px solid $light-gray;
+        padding-bottom: .7rem;
+        margin-bottom: 1rem;
+    }
+
+    &__content{
+
+    }
+}
+
+.d-box{
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    padding: .7rem;
+    color: $nav-bg;
+    transition: all .2s;
+
+    &__number{
+        font-size: 2rem;
+        font-weight: bold;
+
+    }
+
+    &:hover{
+        background-color: $lighter-gray;
+        border-color: $primary-color;
+    }
+
+    &:active{
+        background-color: lighten($primary-color, 40%);
+    }
+}
