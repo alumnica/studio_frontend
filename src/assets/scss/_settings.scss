@@ -62,6 +62,7 @@
 
 @import 'util/util';
 
+
 // 1. Global
 // ---------
 
@@ -106,7 +107,7 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 815px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,

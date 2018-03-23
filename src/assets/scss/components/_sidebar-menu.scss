@@ -1,0 +1,102 @@
+$accordion-bg: #4d5158;
+$accordion-separator: #41444a;
+$accordion-hover-bg: #35383d;
+
+.sidebar-menu{
+    @include xy-cell(15%);
+    margin: 0;
+    background-color: $accordion-bg;
+    padding-top: 1rem;
+    box-shadow: inset -10px 0 10px $accordion-separator;
+    position: relative;
+
+    &__ul {
+        
+        .is-active > a {
+
+            background-color: lighten( $accordion-hover-bg, 20% );
+            position: relative;
+            box-shadow: 0 5px 5px $accordion-separator ;
+
+            &:after{
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 15px 15px 0;
+                border-color: transparent $white transparent transparent;
+                position: absolute;
+                display: block;
+                right: 0%;
+                top: 50%;
+                transform: translateY(-50%) 
+                
+                
+            }
+            
+            }
+        li{
+            
+            
+            
+            a{
+            
+            color: white;
+            transition: all .3s;
+            display: block;
+            padding-left: .2rem;
+
+            &:hover {
+                background-color: $accordion-hover-bg;
+                color: lighten($primary-color, 30%);
+
+                
+                }
+
+            
+            }
+
+            
+        }
+    }
+}
+
+.logout {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    
+    li{
+        a{
+            color: $white;
+            transition: all .3s;
+    
+            &:hover {
+                background-color: $accordion-hover-bg;
+                color: tomato;
+
+                
+                
+                }
+        }
+    }
+    
+}
+
+
+
+.menu-image {
+    float: left;
+    width: 36px;
+    height: 34px;
+    margin: 0;
+    text-align: center;
+    
+    
+}
+
+
+
+.m-text{
+   
+}
