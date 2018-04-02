@@ -1,0 +1,79 @@
+.pos {
+    width: 10px;
+}
+
+.color {
+    
+&-1{
+    width: 20px;
+    height: 1rem;
+    background-color: red;
+}
+
+.id-num {
+
+}
+
+
+}
+
+.titulo_lista{
+    font-size: 1rem;
+}
+
+.title-edit-menu{
+    padding-top: .3rem;
+    @include breakpoint(medium){ 
+        opacity: .5;
+        }
+
+    
+    a{
+        color: $dark-gray;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+    .borrar {
+        a{
+            color: red;
+        }
+    }
+
+    .editar-tag {
+        float: right;
+    }
+
+    &:hover{
+        opacity: 1;
+    }
+ 
+}
+.tag-length {
+    width: 20%;
+}
+.tag-list {
+    font-size: .7rem;
+    a{
+        background-color: $light-gray;
+        padding: .3rem;
+        border-radius: 1rem;
+        margin-top: 3px;
+        display: inline-block;
+
+        &:hover{
+            background-color: darken($light-gray, 10%);
+        }
+
+    }
+}
+
+table {
+
+    td {
+        border-right: solid 1px $light-gray;
+        vertical-align: top;
+    }
+}
