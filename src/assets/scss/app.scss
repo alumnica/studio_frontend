@@ -61,7 +61,6 @@
 
 
 @import "fontawesome";
-
 // @import "fa-brands";
 // @import "fa-light";
 @import "fa-regular";
@@ -77,3 +76,12 @@
 @import 'components/datatables';
 @import 'components/ambitos';
 @import 'components/ambitos-edit';
+@import 'components/taggle';
+
+
+//jquery ui
+@import 'jquery-ui/jquery-ui';
+@import 'jquery-ui/foundation.jquery-ui.theme';
+
+//selectize
+@import 'selectize/selectize';

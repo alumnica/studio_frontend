@@ -16,13 +16,14 @@
             <hr>
         </div>
         <div class="cell medium-12">
-            <form>
+            <form method="POST" id="ambito-creation">
                 <div class="grid-x grid-margin-x">
                     <div class="cell medium-5">
                         <label for="titulo-ambito-nuevo">Titulo</label>
                         <input type="text" placeholder="titulo" id="changedtext">
+
                         <label for="tags-ambito">Tags</label>
-                        <textarea name="tags-ambito" id="" cols="30" rows="1"></textarea>
+                        <input name="tags-ambito" type="text" id="ambito-tags">
                         <label>Posición
                             <select class="position-ambito-size">
                                 <option value="1">1</option>
@@ -75,7 +76,7 @@
                                 </div>
                             </label>
 
-                           <label class="amarillo-sol">
+                            <label class="amarillo-sol">
                                 <input type="radio" name="color" value="#f0c43f" class="radio-input" data-a="amarillo-sol_bg" data-b="amarillo-sol_text">
                                 <div class="color-circle">
                                     <span></span>
@@ -83,21 +84,21 @@
                             </label>
 
                             <label class="naranja-obscuro">
-                                <input type="radio" name="color" value="#d2752f" class="radio-input"  data-a="naranja-obscuro_bg" data-b="naranja-obscuro_text">
+                                <input type="radio" name="color" value="#d2752f" class="radio-input" data-a="naranja-obscuro_bg" data-b="naranja-obscuro_text">
                                 <div class="color-circle">
                                     <span></span>
                                 </div>
                             </label>
 
                             <label class="violeta">
-                                <input type="radio" name="color" value="#b52067" class="radio-input"  data-a="violeta_bg" data-b="violeta_text">
+                                <input type="radio" name="color" value="#b52067" class="radio-input" data-a="violeta_bg" data-b="violeta_text">
                                 <div class="color-circle">
                                     <span></span>
                                 </div>
                             </label>
 
                             <label class="azul-obscuro">
-                                <input type="radio" name="color" value="#625fa6" class="radio-input"  data-a="azul-obscuro_bg" data-b="azul-obscuro_text">
+                                <input type="radio" name="color" value="#625fa6" class="radio-input" data-a="azul-obscuro_bg" data-b="azul-obscuro_text">
                                 <div class="color-circle">
                                     <span></span>
                                 </div>
@@ -136,19 +137,27 @@
                     <div class="cell medium-4 medium-offset-1">
                         <div class="panel">
                             <div class="panel__title">
-                                <i class="fas fa-clone"></i> Materias Asignadas <span class="add-materia"><a href="#"><i class="fas fa-plus-square"></i></a></span>
+                                <i class="fas fa-clone"></i> Materias Asignadas
+                                <span class="add-materia" data-open="exampleModal1">
+                                    <i class="fas fa-plus-square"></i>
+                                </span>
                             </div>
                             <ul id="sortable">
-                                <li class="ui-state-default">
-                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 1 <span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>
-                                <li class="ui-state-default">
-                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 2 <span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>
-                                <li class="ui-state-default">
-                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 3 <span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>
-                                <li class="ui-state-default">
-                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 4 <span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>
+                                <!-- <li id="mat_1" class="ui-state-default">
+                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 1
+                                    <span class="remove_materia">
+                                        <a href="#">
+                                            <i class="fas fa-minus-square"></i>
+                                        </a>
+                                    </span>
+                                </li> -->
+                                
+                               
                             </ul>
                         </div>
+
+                        <!-- <input type="text" id="class_order"> -->
+                        <input type="hidden" id="class_name">
 
                         <br>
                         <div class="panel">
@@ -158,9 +167,30 @@
                             <p>
                                 <strong>Publicado:</strong> N/A</p>
                             <a href="#" class="button secondary">Salvar como borrador</a>
-                            <a href="#" class="button primary publicar">Publicar</a>
+                            <button type="submit" class="button primary publicar">Publicar</a>
                         </div>
                     </div>
             </form>
             </div>
+        </div>
+
+
+        <!-- modal -->
+
+        <div class=" reveal" id="exampleModal1" data-reveal>
+            <h4>Selección de Materias</h4>
+            <br>
+
+            <label for="materias-select">Busca en la Biblioteca de Materias</label>
+            <select name="materias-select" id="select-materias"></select>
+
+            
+            <br />
+            <br>
+            <br>
+            <input class='button expanded' type='submit' value='Añadir' data-close/>
+
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
