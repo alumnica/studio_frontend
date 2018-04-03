@@ -22,8 +22,13 @@
                         <label for="titulo-ambito-nuevo">Titulo</label>
                         <input type="text" placeholder="titulo" id="changedtext">
 
+                        <!-- tags -->
+
                         <label for="tags-ambito">Tags</label>
                         <input name="tags-ambito" type="text" id="ambito-tags">
+
+                        <!-- end tags -->
+
                         <label>Posición
                             <select class="position-ambito-size">
                                 <option value="1">1</option>
@@ -156,7 +161,6 @@
                             </ul>
                         </div>
 
-                        <!-- <input type="text" id="class_order"> -->
                         <input type="hidden" id="class_name">
 
                         <br>
@@ -188,7 +192,7 @@
             <br />
             <br>
             <br>
-            <input class='button expanded' type='submit' value='Añadir' data-close/>
+            <input id="class-adder" class='button expanded' type='submit' value='Añadir' data-close/>
 
             <button class="close-button" data-close aria-label="Close modal" type="button">
                 <span aria-hidden="true">&times;</span>

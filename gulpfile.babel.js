@@ -1,17 +1,17 @@
 'use strict';
 
-import plugins       from 'gulp-load-plugins';
-import yargs         from 'yargs';
-import browser       from 'browser-sync';
-import gulp          from 'gulp';
-import panini        from 'panini';
-import rimraf        from 'rimraf';
-import sherpa        from 'style-sherpa';
-import yaml          from 'js-yaml';
-import fs            from 'fs';
+import plugins from 'gulp-load-plugins';
+import yargs from 'yargs';
+import browser from 'browser-sync';
+import gulp from 'gulp';
+import panini from 'panini';
+import rimraf from 'rimraf';
+import sherpa from 'style-sherpa';
+import yaml from 'js-yaml';
+import fs from 'fs';
 import webpackStream from 'webpack-stream';
-import webpack2      from 'webpack';
-import named         from 'vinyl-named';
+import webpack2 from 'webpack';
+import named from 'vinyl-named';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -112,6 +112,9 @@ let webpackConfig = {
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript() {
+  gulp.src('src/assets/js/tags.js').pipe(gulp.dest('dist/assets/js'));
+  gulp.src('src/assets/js/materias.js').pipe(gulp.dest('dist/assets/js'));
+
   return gulp.src(PATHS.entries)
     .pipe(named())
     .pipe($.sourcemaps.init())

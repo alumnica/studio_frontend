@@ -2,7 +2,7 @@
 
 
         <h1 class="title">
-            Crear nuevo ámbito
+            Crear nueva Materia
         </h1>
         <hr>
     
@@ -16,7 +16,7 @@
                 <hr>
             </div>
             <div class="cell medium-12">
-                <form>
+                <form method="POST">
                     <div class="grid-x grid-margin-x">
                         <div class="cell medium-5">
                             <label for="titulo-materia">Titulo</label>
@@ -29,8 +29,14 @@
                                     <option value="volvo">Prop prop prop</option>
                                     
                                   </select>
-                            <label for="tags-ambito">Tags</label>
-                            <textarea name="tags-ambito" id="" cols="30" rows="1"></textarea>
+                                                        
+                            <!-- tags -->
+
+                            <label for="tags-materias">Tags</label>
+                            <input name="tags-materias" type="text" id="materias-tags">
+
+                            <!-- end tags -->
+
                             <label>Número de secciones dentro de la materia
                                 <select class="position-ambito-size">
                                     <option value="1">1</option>
@@ -47,11 +53,11 @@
                             <div class="panel">
                                 <div class="panel__title">Detalles de publicación</div>
                                 <p>
-                                    <strong>Estado:</strong> Sin Publicar</p>
+                                    <strong>Estado:</strong> <span id="estado">Sin Publicar</span></p>
                                 <p>
-                                    <strong>Publicado:</strong> N/A</p>
+                                    <strong>Publicado:</strong><span id="fecha-pub">N/A</span></p>
                                 <a href="#" class="button secondary">Salvar como borrador</a>
-                                <a href="#" class="button primary publicar">Publicar</a>
+                                <button type="submit" class="button primary publicar">Publicar</a>
                             </div>
                         </div>
                 </form>

@@ -21,7 +21,11 @@ import Foundation from 'foundation-sites';
 import 'datatables.net-zf';
 import 'datatables.net-responsive-zf';
 
-//taggle
+//Sweet Alert 2
+
+import swal from 'sweetalert2';
+
+window.swal = swal;
 
 //selectize
 
@@ -38,7 +42,7 @@ $('#tabla-ambitos').DataTable({
         "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
     },
     "columnDefs": [
-        { "orderable": false, "targets": [2, 3, 4, 6] }
+        { "orderable": false, "targets": [2, 3, 4] }
     ],
 
 });
@@ -89,62 +93,12 @@ $('#color-button input[type=radio]').click(function () {
     $('#ttc').attr('class', $this.data('b'));
 });
 
-
-
-//selectize usage
-
-var ambitoTags = [
-    {name: 'tag1', value: 't1'},
-    {name: 'tag2', value: 't2'},
-    {name: 'tag3', value: 't3'},
-    {name: 'cosa', value: 'cs'},
-    {name: 'tag5', value: 't5'},
-    {name: 'OTHER', value: 'ot'},
-    {name: 'tag7', value: 't7'},
-];
-
-$('#ambito-tags').selectize({
-    labelField: 'name',
-    valueField: 'value',
-    searchField: 'name',
-    hideSelected: true,
-    persist: false,
-    createOnBlur: true,
-    create: function(input) {
-        return {
-            value: input,
-            name: input
-        }
-    },
-    options: ambitoTags,
-    preload: false,
-});
-
-var materiasList = [ 
-    {name: 'Afghanistan', code: 'AF'}, 
-    {name: 'Åland Islands', code: 'AX'}, 
-    {name: 'Albania', code: 'AL'},
-];
-
-$('#select-materias').selectize({
-    maxItems: 1,
-    labelField: 'name',
-    valueField: 'name',
-    searchField: 'name',
-    options: materiasList,
-    preload: true,
-});
-
-
-//sortable ambitos
+//Sortable Materias en creacion de  Ambitos
 
 $(function () {
-    $("#sortable").sortable({
-    //     update:function(event, ui){
-    //         alert($(ui.item).text());
-    //    }
-    });
+    $("#sortable").sortable();
     // $( "#sortable" ).disableSelection();
+    // deprecated
 });
 
 
@@ -154,20 +108,16 @@ $("#sortable").on('click', '.remove_materia', function () {
 
 var numMateria = 1;
 
-$(".btn").click(function (e) {
+$("#class-adder").click(function (e) {
     e.preventDefault();
     var text = $("select[name='materias-select']").val();
     
-    // var $li = $('<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>some text<span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>');
     $("#sortable").append('<li id="mat_'+ numMateria++ +'" class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>' + text + '<span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>');
     $("#sortable").sortable('refresh');
 });
 
 $('form#ambito-creation').submit(function(){
-     
     
-    // $('#class_name').val($( "#sortable" ).sortable("serialize"));
-    // $('#class_name')
     var texts = [];
 
     $(function() {
@@ -181,15 +131,19 @@ $('form#ambito-creation').submit(function(){
 
     // 
 
-   return false;
+//    return false
+//      used to stop POST
 }); 
 
-// var texts = [];
+// nav on click
 
-// $(function() {
-//     $('#sortable li').each(function(){
-//         texts.push($(this).text());
-//     });
-
-//     alert(texts);
+// $("#dash-nav").click(function(){
+//     $(this).addClass("is-active");
+//     $("#ambito-nav")
 // });
+
+{/* <script>
+$(function(){
+$('#materia-nav').addClass('is-active');
+});
+</script> */}
