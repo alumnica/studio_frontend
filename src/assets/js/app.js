@@ -31,6 +31,11 @@ window.swal = swal;
 
 import 'selectize';
 
+// alphanum
+
+
+
+
 // import './lib/jquery.uploadPreview';
 
 $(document).foundation();
@@ -103,25 +108,57 @@ $(function () {
 
 
 $("#sortable").on('click', '.remove_materia', function () {
-    $(this).parent().remove(); 
+    $(this).parent().remove();
+    if ( $('ul#sortable li').length < 4 ) {
+        $('#add-materia-button').show();
+    }
 });
 
 var numMateria = 1;
 
-$("#class-adder").click(function (e) {
-    e.preventDefault();
-    var text = $("select[name='materias-select']").val();
-    
-    $("#sortable").append('<li id="mat_'+ numMateria++ +'" class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>' + text + '<span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>');
-    $("#sortable").sortable('refresh');
+
+
+$(document).ready(function () {
+    $('#select-materias').change(function () {
+        if (!$("select[name='materias-select']").val()) {
+
+            $('#class-adder').prop("disabled", true)
+        }
+        else {
+
+            $('#class-adder').prop("disabled", false);
+        }
+    })
 });
 
-$('form#ambito-creation').submit(function(){
-    
+// $(document).ready(function () {
+//     if ( $('ul#sortable li').length > 3 ) {
+//         $('#add-materia-button').hide();
+//     }
+// });
+
+$("#class-adder").click(function (e) {
+    e.preventDefault();
+
+    var text = $("select[name='materias-select']").val();
+
+    $("#sortable").append('<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>' + text + '<span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>');
+    $("#sortable").sortable('refresh');
+    if ( $('ul#sortable li').length > 3 ) {
+        $('#add-materia-button').hide();
+    }
+
+
+});
+
+
+
+$('#last_panel').on('mouseenter mouseleave', function () {
+
     var texts = [];
 
-    $(function() {
-        $('#sortable li').each(function(){
+    $(function () {
+        $('#sortable li').each(function () {
             texts.push($(this).text());
         });
 
@@ -129,11 +166,39 @@ $('form#ambito-creation').submit(function(){
         $('#class_name').val(texts);
     });
 
-    // 
+});
+// $('form#ambito-creation').submit(function(){
+
+//     var texts = [];
+
+//     $(function() {
+//         $('#sortable li').each(function(){
+//             texts.push($(this).text());
+//         });
+
+//         // alert(texts);
+//         $('#class_name').val(texts);
+//     });
+
+//     // 
 
 //    return false
-//      used to stop POST
-}); 
+// //      used to stop POST
+// }); 
+
+// $('#sortable').on('change', function(){
+
+//     var texts = [];
+
+//     $(function() {
+//         $('#sortable li').each(function(){
+//             texts.push($(this).text());
+//         });
+
+//         // alert(texts);
+//         $('#class_name').val(texts);
+//     });
+// });
 
 // nav on click
 
@@ -142,8 +207,13 @@ $('form#ambito-creation').submit(function(){
 //     $("#ambito-nav")
 // });
 
-{/* <script>
-$(function(){
-$('#materia-nav').addClass('is-active');
-});
-</script> */}
+// {/* <script>
+// $(function(){
+// $('#materia-nav').addClass('is-active');
+// });
+// </script> */
+
+
+// import 'jquery.alphanum';
+
+
