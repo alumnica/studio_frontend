@@ -1,6 +1,12 @@
 // import 'taggle';
 
 import $ from 'jquery';
+
+// import js libraries with webpack
+// requires npm install imports-loader (sudo maybe required)
+// check https://foundation.zurb.com/forum/posts/53526-how-to-add-npm-package-js-file-to-foundation-64
+import 'imports-loader?jQuery=jquery!jquery.alphanum';
+
 import whatInput from 'what-input';
 
 
@@ -33,7 +39,7 @@ import 'selectize';
 
 // alphanum
 
-
+// import alphanum from 'jquery.alphanum';
 
 
 // import './lib/jquery.uploadPreview';
@@ -65,27 +71,27 @@ $('#tabla-materias').DataTable({
 
 
 
-$("#fileUpload").on('change', function () {
+// $("#fileUpload").on('change', function () {
 
-    if (typeof (FileReader) != "undefined") {
+//     if (typeof (FileReader) != "undefined") {
 
-        var image_holder = $("#image-holder");
-        image_holder.empty();
+//         var image_holder = $("#image-holder");
+//         image_holder.empty();
 
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $("<img />", {
-                "src": e.target.result,
-                "class": "thumb-image"
-            }).appendTo(image_holder);
+//         var reader = new FileReader();
+//         reader.onload = function (e) {
+//             $("<img />", {
+//                 "src": e.target.result,
+//                 "class": "thumb-image"
+//             }).appendTo(image_holder);
 
-        }
-        image_holder.show();
-        reader.readAsDataURL($(this)[0].files[0]);
-    } else {
-        alert("This browser does not support FileReader.");
-    }
-});
+//         };
+//         image_holder.show();
+//         reader.readAsDataURL($(this)[0].files[0]);
+//     } else {
+//         alert("This browser does not support FileReader.");
+//     }
+// });
 
 $('#changedtext').keyup(function () {
     var textToChange = $(this).val();
@@ -109,7 +115,7 @@ $(function () {
 
 $("#sortable").on('click', '.remove_materia', function () {
     $(this).parent().remove();
-    if ( $('ul#sortable li').length < 4 ) {
+    if ($('ul#sortable li').length < 4) {
         $('#add-materia-button').show();
     }
 });
@@ -122,13 +128,13 @@ $(document).ready(function () {
     $('#select-materias').change(function () {
         if (!$("select[name='materias-select']").val()) {
 
-            $('#class-adder').prop("disabled", true)
+            $('#class-adder').prop("disabled", true);
         }
         else {
 
             $('#class-adder').prop("disabled", false);
         }
-    })
+});
 });
 
 // $(document).ready(function () {
@@ -144,7 +150,7 @@ $("#class-adder").click(function (e) {
 
     $("#sortable").append('<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>' + text + '<span class="remove_materia"><a href="#"><i class="fas fa-minus-square"></i></a></span></li>');
     $("#sortable").sortable('refresh');
-    if ( $('ul#sortable li').length > 3 ) {
+    if ($('ul#sortable li').length > 3) {
         $('#add-materia-button').hide();
     }
 
@@ -167,53 +173,113 @@ $('#last_panel').on('mouseenter mouseleave', function () {
     });
 
 });
-// $('form#ambito-creation').submit(function(){
 
-//     var texts = [];
+// alphanum for all inputs
 
-//     $(function() {
-//         $('#sortable li').each(function(){
-//             texts.push($(this).text());
+$("input").alphanum();
+
+// Image file upload preview for Materias
+
+// Secciones
+
+
+
+// $(document).ready(function () {
+
+//     var A = 1;
+//     var C = A;
+//     console.log(C);
+
+//     var i = 0;
+    
+
+//     $(".ex1").each(function () {
+
+//         $("#section-" + i + "-upload").on('change', function () {
+//             
+//                 var image_holder = $("#image-holder-m-s"+i);
+//                 image_holder.empty();
+
+//                 var reader = new FileReader();
+//                 reader.onload = function (e) {
+//                     $("<img />", {
+//                         "src": e.target.result,
+//                         "class": "thumb-image"
+//                     }).appendTo(image_holder);
+
+//                 }
+//                 image_holder.show();
+//                 reader.readAsDataURL($(this)[0].files[0]);
+//                
+//             } else {
+//                 alert("This browser does not support FileReader.");
+//             }
+
 //         });
+//         i=i+1;
+//         console.log(i);
 
-//         // alert(texts);
-//         $('#class_name').val(texts);
-//     });
-
-//     // 
-
-//    return false
-// //      used to stop POST
-// }); 
-
-// $('#sortable').on('change', function(){
-
-//     var texts = [];
-
-//     $(function() {
-//         $('#sortable li').each(function(){
-//             texts.push($(this).text());
-//         });
-
-//         // alert(texts);
-//         $('#class_name').val(texts);
 //     });
 // });
+$(document).ready(function () {
+    var i = 0;
+    var y = 0;
+    $("form#seccion-img img").each(function () {
+        i++;
+        $(this).attr("id", "preview-u" + i);
 
-// nav on click
+        console.log(i);
+    });
 
-// $("#dash-nav").click(function(){
-//     $(this).addClass("is-active");
-//     $("#ambito-nav")
-// });
+    $("form#materia-init img").attr("id", "preview-mp");
+    
+    $("form#ambito-creation img").attr("id", "preview-ap");
 
-// {/* <script>
-// $(function(){
-// $('#materia-nav').addClass('is-active');
-// });
-// </script> */
+    $("form#odas-seccion-1 .img-preview-a img").each(function () {
+        i++;
+        $(this).attr("id", "preview-oda-a" + i);
+
+        console.log(i);
+    });
+
+    $("form#odas-seccion-1 .img-preview-b img").each(function () {
+        y++;
+        $(this).attr("id", "preview-oda-b" + y);
+
+        console.log(y);
+    });
+});
+
+$(document).ready(function () {
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            var cosa = '#preview-' + $(input).attr('name');
+            $(cosa).attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("form#seccion-img input[type='file']").change(function () {
+    readURL(this);
+});
+
+$("#materia-u").change(function () {
+    readURL(this);
+});
+
+$("#ambito-u").change(function () {
+    readURL(this);
+});
+
+$("form#odas-seccion-1 input[type='file']").change(function () {
+    readURL(this);
+});
 
 
-// import 'jquery.alphanum';
-
-
+});

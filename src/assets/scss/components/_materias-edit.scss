@@ -1,0 +1,44 @@
+.left-border {
+    
+    
+   @include breakpoint(medium){
+        border-right: $light-gray solid 1px
+   }
+}
+
+
+.section-preview{
+    border: solid 1px $medium-gray;
+    min-height: 5rem;
+}
+
+.img-preview-a{
+    border: solid 1px $medium-gray;
+    overflow: hidden;
+    height: 8rem;
+    width: 7rem;
+    
+    margin: 0 auto;
+    
+}
+
+
+.img-preview-b{
+    border: solid 1px $medium-gray;
+    overflow: hidden;
+    height: 8rem;
+    width: 7rem;
+    
+    margin: 0 auto;
+    
+}
+
+
+.img-preview-button{
+    display: inline-block;
+    border: solid 1px black;
+    width: 68%;
+    height: 8rem;
+    margin: 0;
+    
+}

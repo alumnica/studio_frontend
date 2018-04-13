@@ -96,6 +96,11 @@ function sass() {
 }
 
 let webpackConfig = {
+  resolve: {
+    alias: {
+        jquery: "jquery/src/jquery"
+      }
+  },
   module: {
     rules: [
       {
