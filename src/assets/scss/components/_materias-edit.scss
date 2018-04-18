@@ -42,3 +42,90 @@
     margin: 0;
     
 }
+
+// drag and drop test
+
+.drop-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+}
+
+
+.canvas {
+position: relative;
+
+
+    .frame {
+    position: relative;
+    float: left;
+    // top: 100px;
+    // left: 200px;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 500px;
+    // border: 1px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    }
+}
+
+.canvas .frame .dropzone {
+    position: relative;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 125px;
+    // background: ;
+}
+
+.canvas .frame .dropzone:before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: #bbb;
+    border-radius: 20px;
+    position: relative;
+    left: 25px;
+    top: 50px;
+}
+
+.canvas .frame .dropzone.drop-target {
+    background: rgba(22, 110, 241, 0.555);
+}
+
+
+.block {
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 125px;
+    // background: rgba(150, 40, 40, .4);
+    display: inline-block;
+
+    img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+.oda-desc {
+    display: inline-block;
+    vertical-align: top;
+    margin: 3rem 1rem;
+    font-size: 1.3rem;
+
+
+}
+
+
+
+
+

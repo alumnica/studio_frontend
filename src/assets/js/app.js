@@ -15,7 +15,9 @@ window.$ = $;
 
 // import 'jquery-ui/ui/core';
 import 'jquery-ui/ui/widgets/sortable';
-import 'jquery-ui/ui/effects/effect-bounce';
+import 'jquery-ui/ui/widgets/draggable';
+import 'jquery-ui/ui/widgets/droppable';
+
 
 
 import Foundation from 'foundation-sites';
@@ -37,9 +39,19 @@ window.swal = swal;
 
 import 'selectize';
 
-// alphanum
+// gridstack
 
-// import alphanum from 'jquery.alphanum';
+import gridstack from 'gridstack';
+
+// import draggable shofiy
+
+// import { Draggable } from '@shopify/draggable';
+
+import interact from 'interactjs';
+
+
+
+import alphanum from 'jquery.alphanum';
 
 
 // import './lib/jquery.uploadPreview';
@@ -134,7 +146,7 @@ $(document).ready(function () {
 
             $('#class-adder').prop("disabled", false);
         }
-});
+    });
 });
 
 // $(document).ready(function () {
@@ -177,7 +189,7 @@ $('#last_panel').on('mouseenter mouseleave', function () {
 // alphanum for all inputs
 
 $("input").alphanum();
-
+$('#id_email, #id_password').off('.alphanum');
 // Image file upload preview for Materias
 
 // Secciones
@@ -191,7 +203,7 @@ $("input").alphanum();
 //     console.log(C);
 
 //     var i = 0;
-    
+
 
 //     $(".ex1").each(function () {
 
@@ -232,7 +244,7 @@ $(document).ready(function () {
     });
 
     $("form#materia-init img").attr("id", "preview-mp");
-    
+
     $("form#ambito-creation img").attr("id", "preview-ap");
 
     $("form#odas-seccion-1 .img-preview-a img").each(function () {
@@ -252,34 +264,189 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function (e) {
-            var cosa = '#preview-' + $(input).attr('name');
-            $(cosa).attr('src', e.target.result);
-        };
+            reader.onload = function (e) {
+                var cosa = '#preview-' + $(input).attr('name');
+                $(cosa).attr('src', e.target.result);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-}
 
-$("form#seccion-img input[type='file']").change(function () {
-    readURL(this);
+    $("form#seccion-img input[type='file']").change(function () {
+        readURL(this);
+    });
+
+    $("#materia-u").change(function () {
+        readURL(this);
+    });
+
+    $("#ambito-u").change(function () {
+        readURL(this);
+    });
+
+    $("form#odas-seccion-1 input[type='file']").change(function () {
+        readURL(this);
+    });
+
+
 });
 
-$("#materia-u").change(function () {
-    readURL(this);
-});
-
-$("#ambito-u").change(function () {
-    readURL(this);
-});
-
-$("form#odas-seccion-1 input[type='file']").change(function () {
-    readURL(this);
-});
 
 
+
+// var z = 0;
+
+// $('.drag-item').each(function () {
+//     z++;
+//     $('#makeMeDraggable' + z).draggable({
+//         containment: '#drag-to-area',
+//         cursor: 'move',
+//         snap: '#drag-to-area',
+//         grid: [75, 125],
+//         stop: handleDragStop,
+//     });
+// });
+
+// function handleDragStop( event, ui ) {
+//     var offsetXPos = parseInt( ui.offset.left );
+//     var offsetYPos = parseInt( ui.offset.top );
+//     alert( "Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
+//   }
+
+
+
+var startPos = null;
+
+interact('.block')
+    .draggable({
+        // enable inertial throwing
+        inertia: true,
+		// keep the element within the area of it's parent
+        // restrict: {
+        //     restriction: "parent",
+        //     endOnly: true,
+        //     elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+        // },
+        snap:{
+			targets: [startPos],
+            range: Infinity,
+            relativePoints: [ { x: 0.5, y: 0.5 } ],
+            endOnly: true 
+		},
+        onmove: dragMoveListener,
+        onstart: function (event) {
+            
+            var rect = interact.getElementRect(event.target);
+
+            // record center point when starting the very first a drag
+            var startPos = {
+                x: rect.left + rect.width  / 2,
+                y: rect.top  + rect.height / 2
+            }
+        
+            event.interactable.draggable({
+                snap: {
+                    targets: [startPos]
+                }
+            });
+        },
+		
+    });
+
+ function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  };
+
+
+  interact('.dropzone').dropzone({
+    // enable draggables to be dropped into this
+    // overlap: 'center',
+    // only accept elements matching this CSS selector
+    // accept: '.block',
+
+    ondragenter: function (event) {
+        var draggableElement = event.relatedTarget,
+            dropzoneElement = event.target,
+            dropRect = interact.getElementRect(dropzoneElement),
+		    dropCenter = {
+                x: dropRect.left + dropRect.width  / 2,
+                y: dropRect.top  + dropRect.height / 2
+		    };
+
+		event.draggable.draggable({
+            snap: {
+                targets: [ dropCenter ]
+            }
+		});
+
+
+        // feedback the possibility of a drop
+        dropzoneElement.classList.add('drop-target');
+        draggableElement.classList.add('can-drop');
+    },
+    ondragleave: function (event) {
+		// when leaving a dropzone, snap to the start position
+		
+		event.draggable.draggable({
+            snap: {
+                targets: [ startPos ]
+            }
+		});
+
+		// remove the drop feedback style
+        event.target.classList.remove('drop-target');
+        event.relatedTarget.classList.remove('can-drop');
+    },
+    ondropactivate: function (event) {
+        // add active dropzone feedback
+        event.target.classList.add('drop-active');
+    },
+    ondropdeactivate: function (event) {
+        // remove active dropzone feedback
+        event.target.classList.remove('drop-active');
+        event.target.classList.remove('drop-target');
+    },
+    ondrop: function (event) {
+            // add data-n of target
+        event.relatedTarget.setAttribute('data-n', event.target.id)
+		// in all the hidden inputs place the id of target in value
+        $(function () {
+            var i = 1;
+            $('.block').each(function(){			
+                $('#p-block-'+i).val(this.getAttribute('data-n'));	
+            i++;			
+            });
+        });
+    }
+  });
+
+$(document).ready(function () {
+    var i = 0
+    $('.block').each(function () {
+        i++;
+        $('#inputs-h').prepend(
+            $('<input>').attr({
+                type: 'hidden',
+                id: 'p-block-' + i,
+            })
+        );
+    });
 });
+
