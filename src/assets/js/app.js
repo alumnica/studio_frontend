@@ -47,7 +47,7 @@ import gridstack from 'gridstack';
 
 // import { Draggable } from '@shopify/draggable';
 
-import interact from 'interactjs';
+
 
 
 

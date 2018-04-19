@@ -1,3 +1,5 @@
+import interact from 'interactjs';
+
 var startPos = null;
 
 interact('.block')
