@@ -11,6 +11,7 @@ var ambitoTags = [
 ];
 
 $('#ambito-tags').selectize({
+  
     labelField: 'name',
     valueField: 'name',
     searchField: 'name',
@@ -56,3 +57,4 @@ $('#materias-tags').selectize({
     options: materiasTags,
     preload: false,
 });
+

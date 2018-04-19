@@ -1,4 +1,6 @@
-import interact from 'interactjs';
+
+
+$(document).ready(function () {
 
 var startPos = null;
 
@@ -116,6 +118,7 @@ interact('.block')
         });
     }
   });
+});
 
 $(document).ready(function () {
     var i = 0
@@ -125,6 +128,7 @@ $(document).ready(function () {
             $('<input>').attr({
                 type: 'hidden',
                 id: 'p-block-' + i,
+                name: 'pblock-' + i,
             })
         );
     });

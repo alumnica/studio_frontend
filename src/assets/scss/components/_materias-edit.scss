@@ -12,6 +12,18 @@
     min-height: 5rem;
 }
 
+.materia-preview{
+    border: solid 1px $medium-gray;
+    height: 150px;
+}
+
+.materia-cover {
+ height: 150px;
+ width: 100%;  
+  object-fit: cover;
+}
+
+
 .img-preview-a{
     border: solid 1px $medium-gray;
     overflow: hidden;
