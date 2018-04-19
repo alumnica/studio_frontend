@@ -55,6 +55,7 @@
 
 .canvas {
 position: relative;
+height: 510px;
 
 
     .frame {
@@ -125,7 +126,23 @@ position: relative;
 
 }
 
+.drop-area {
+    position: relative;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 125px;
+    // background: ;
+    img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 
-
+.section-block {
+    display: block;
+}
 
 
