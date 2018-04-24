@@ -1,25 +1,4 @@
 
-$('#tabla-ambitos').DataTable({
-    responsive: true,
-    "language": {
-        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-    },
-    "columnDefs": [
-        { "orderable": false, "targets": [2, 3, 4] }
-    ],
-
-});
-
-$('#tabla-materias').DataTable({
-    responsive: true,
-    "language": {
-        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-    },
-    "columnDefs": [
-        { "orderable": false, "targets": [2] }
-    ],
-
-});
 
 
 // cambiar texto de el image preview al escribir
@@ -106,7 +85,9 @@ $('#last_panel').on('mouseenter mouseleave', function () {
 
 // alphanum for all inputs
 
-$("input").alphanum();
+$("input").alphanum({
+    allow :    ',',
+});
 
 // quita alphanum
 $('#id_email, #id_password').off('.alphanum');
@@ -173,5 +154,48 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.selectize-input input[type=text]').attr('maxlength', '20');
-    
+    $(".title span").append($(".id_name_field").val());
 });
+
+// var options = {
+//     valueNames: [ 'name', 'born' ]
+//   };
+  
+  
+//   var userList = new List('users', options);
+  
+//   userList.add({
+//     name: "Gustaf Lindqvist",
+//     born: 1983
+//   });
+
+
+
+//More (Expand) or Less (Collapse)
+$('.oda-materias').each(function(){
+    var filterAmount = $(this).find('li').length;
+    if( filterAmount > 5){    
+      $('li', this).eq(4).nextAll().hide().addClass('toggleable');
+      $(this).append('<li class="more">Más &darr;</li>');    
+    }  
+  });
+  
+  $('.oda-materias').on('click','.more', function(){
+    if( $(this).hasClass('less') ){    
+      $(this).text('Más \u2193').removeClass('less');    
+    }else{
+      $(this).text('Menos \u2191').addClass('less'); 
+    }
+    $(this).siblings('li.toggleable').slideToggle(); 
+  }); 
+
+
+
+  $('.activity-num').each(function () {
+    var x = $(this).text()
+         if (x == 0) {
+          $(this).find('span').html('<i class="fas fa-times"></i>')
+      } else {
+          $(this).find('span').html('<i class="fas fa-check"></i>')
+          };
+    });

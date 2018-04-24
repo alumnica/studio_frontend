@@ -45,7 +45,36 @@ import interact from 'interactjs';
 window.interact = interact;
 
 
+import List from 'list.js';
+
+window.List = List;
+
+
 // import './lib/jquery.uploadPreview';
 
 $(document).foundation();
+
+
+$('#tabla-ambitos').DataTable({
+    responsive: true,
+    "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+    },
+    "columnDefs": [
+        { "orderable": false, "targets": [2, 3, 4] }
+    ],
+
+});
+
+$('#tabla-materias').DataTable({
+    responsive: true,
+    "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+    },
+    "columnDefs": [
+        { "orderable": false, "targets": [2] }
+    ],
+
+});
+
 

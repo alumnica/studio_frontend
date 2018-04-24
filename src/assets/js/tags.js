@@ -26,6 +26,7 @@ $('#ambito-tags').selectize({
     },
     options: ambitoTags,
     preload: false,
+    maxItems: 20,
 });
 
 
@@ -56,5 +57,6 @@ $('#materias-tags').selectize({
     },
     options: materiasTags,
     preload: false,
+    maxItems: 20,
 });
 

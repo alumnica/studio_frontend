@@ -62,6 +62,7 @@
     left: 0;
     top: 0;
     width: 300px;
+    height: 500px;
 }
 
 
@@ -86,7 +87,8 @@ height: 510px;
     }
 }
 
-.canvas .frame .dropzone {
+.canvas .frame .dropzone,
+.canvas .frame .empty {
     position: relative;
     width: 72px;
     @include breakpoint(large){
@@ -153,8 +155,19 @@ height: 510px;
     }
 }
 
+.drop-active {
+    // border: solid 2px white;
+}
+
 .section-block {
     display: block;
 }
 
+.can-drop{
+    border: solid 3px white;
+}
+
+.bgred {
+    background-color: red;
+}
 

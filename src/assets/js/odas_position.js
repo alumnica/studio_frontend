@@ -23,20 +23,21 @@ interact('.block')
         onmove: dragMoveListener,
         onstart: function (event) {
             
-            var rect = interact.getElementRect(event.target);
-
-            // record center point when starting the very first a drag
-            var startPos = {
-                x: rect.left + rect.width  / 2,
-                y: rect.top  + rect.height / 2
-            }
-        
-            event.interactable.draggable({
+                var rect = interact.getElementRect(event.target);
+            
+                // record center point when starting the very first a drag
+                var startPos = {
+                        x: rect.left + rect.width  / 2,
+                        y: rect.top  + rect.height / 2
+                    };
+                
+                    event.interactable.draggable({
                 snap: {
-                    targets: [startPos]
-                }
-            });
-        },
+                        targets: [startPos]
+                    }
+                });
+            },
+       
 		
     });
 
@@ -54,7 +55,19 @@ interact('.block')
     // update the posiion attributes
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
-  };
+    $( "#"+target.getAttribute('data-n') ).addClass("dropzone")
+  }
+
+  function revertBack(event) {
+    var target = event.target;
+    target.style.webkitTransform =
+    target.style.transform =
+    'translate(0px, 0px)';
+
+    target.setAttribute('data-x', 0);
+    target.setAttribute('data-y', 0);
+
+}
 
 
   interact('.dropzone').dropzone({
@@ -62,6 +75,8 @@ interact('.block')
     // overlap: 'center',
     // only accept elements matching this CSS selector
     // accept: '.block',
+    
+
 
     ondragenter: function (event) {
         var draggableElement = event.relatedTarget,
@@ -86,11 +101,7 @@ interact('.block')
     ondragleave: function (event) {
 		// when leaving a dropzone, snap to the start position
 		
-		event.draggable.draggable({
-            snap: {
-                targets: [ startPos ]
-            }
-		});
+		
 
 		// remove the drop feedback style
         event.target.classList.remove('drop-target');
@@ -99,6 +110,7 @@ interact('.block')
     ondropactivate: function (event) {
         // add active dropzone feedback
         event.target.classList.add('drop-active');
+        
     },
     ondropdeactivate: function (event) {
         // remove active dropzone feedback
@@ -107,7 +119,10 @@ interact('.block')
     },
     ondrop: function (event) {
             // add data-n of target
-        event.relatedTarget.setAttribute('data-n', event.target.id)
+        event.relatedTarget.setAttribute('data-n', event.target.id);
+        event.target.classList.remove('dropzone');
+        event.target.classList.add('empty');
+        event.relatedTarget.classList.remove('can-drop');
 		// in all the hidden inputs place the id of target in value
         $(function () {
             var i = 1;
@@ -115,20 +130,22 @@ interact('.block')
                 $('#p-block-'+i).val(this.getAttribute('data-n'));	
             i++;			
             });
-        });
+        });    
     }
   });
 });
 
+
+
 $(document).ready(function () {
-    var i = 0
+    var i = 0;
     $('.block').each(function () {
         i++;
         $('#inputs-h').prepend(
             $('<input>').attr({
                 type: 'hidden',
                 id: 'p-block-' + i,
-                name: 'pblock-' + i,
+                name: 'p-block-' + i,
             })
         );
     });
