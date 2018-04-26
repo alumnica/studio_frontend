@@ -1,4 +1,89 @@
 <div class="dashboard container">
 
-     
+    <!-- demo -->
+    <div id="demo">
+
+        <!-- panel -->
+        <div class="jplist-panel">
+
+                <!-- button path filters -->
+            <button
+            type="button"									
+            data-control-type="button-filter"
+            data-control-action="filter"
+            data-control-name="architecture-btn" 
+            data-path=".title" 
+            data-selected="false">
+                <i class="fa fa-home"></i>
+                Architecture
+            </button>
+            
+            <div 
+                class="jplist-drop-down" 
+                data-control-type="sort-drop-down" 
+                data-control-name="sort" 
+                data-control-action="sort"
+                data-datetime-format="{month}/{day}/{year}"> <!-- {year}, {month}, {day}, {hour}, {min}, {sec} -->
+                
+                <ul>
+                    <li><span data-path="default">Sort by</span></li>
+                    <li><span data-path=".title" data-order="asc" data-type="text">Title A-Z</span></li>
+                    <li><span data-path=".title" data-order="desc" data-type="text">Title Z-A</span></li>
+                    <li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
+                    <li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
+                    <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">Likes asc</span></li>
+                    <li><span data-path=".like" data-order="desc" data-type="number">Likes desc</span></li>
+                    <li><span data-path=".date" data-order="asc" data-type="datetime">Date asc</span></li>
+                    <li><span data-path=".date" data-order="desc" data-type="datetime">Date desc</span></li>
+                </ul>
+            </div>		
+         
+     	
+
+
+        </div>
+
+        <!-- HTML data -->
+        <div class="list">
+
+            
+            <!-- item 4 -->
+            <div class="list-item">
+                <p class="title">Arch</p>
+            </div>
+            
+            <!-- item 5 -->
+            <div class="list-item">
+                <p class="title">xooks</p>
+            </div>
+            
+            <!-- item 1 -->
+            <div class="list-item">
+                <p class="title">zhitecture</p>
+            </div>
+
+            <!-- item 2 -->
+            <div class="list-item">
+                <p class="title">Autumn</p>
+            </div>
+
+            <!-- item 3 -->
+            <div class="list-item">
+                <p class="title">Boats</p>
+            </div>
+
+            <!-- item 5 -->
+            <div class="list-item">
+                <p class="other">other</p>
+            </div>
+
+        </div>
+
+        <!-- no results found -->
+        <div class="jplist-no-results">
+            <p>No results found</p>
+        </div>
+
+    </div>
+
 </div>

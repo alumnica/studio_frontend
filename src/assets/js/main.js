@@ -157,19 +157,6 @@ $(document).ready(function () {
     $(".title span").append($(".id_name_field").val());
 });
 
-// var options = {
-//     valueNames: [ 'name', 'born' ]
-//   };
-  
-  
-//   var userList = new List('users', options);
-  
-//   userList.add({
-//     name: "Gustaf Lindqvist",
-//     born: 1983
-//   });
-
-
 
 //More (Expand) or Less (Collapse)
 $('.oda-materias').each(function(){
@@ -190,12 +177,84 @@ $('.oda-materias').each(function(){
   }); 
 
 
+var sinMomentos = 0;
 
-  $('.activity-num').each(function () {
+$('.activity-num').each(function () {
     var x = $(this).text()
-         if (x == 0) {
-          $(this).find('span').html('<i class="fas fa-times"></i>')
-      } else {
-          $(this).find('span').html('<i class="fas fa-check"></i>')
-          };
-    });
+    if (x == 0) {
+        $(this).find('span').html('<i class="fas fa-times"></i>');
+        sinMomentos++;
+        $(this).addClass('noMom');
+    } else {
+        $(this).find('span').html('<i class="fas fa-check"></i>');
+    };
+});
+
+$('#sinMomentos').find('span').html(sinMomentos);
+
+
+$('document').ready(function(){
+        
+    $('#odaSortList').jplist({				
+        itemsBox: '.odas-list', 
+        itemPath: '.oda-container', 
+        panelPath: '.jplist-panel'	
+    });  
+    
+});
+
+
+$('.assigned-to_materias li').each(function()
+    {	var theClass = $(this).text()
+       $(this).addClass(theClass); 
+});
+
+$('.oda-tags li').each(function()
+    {	var theClass = $(this).text()
+       $(this).addClass(theClass); 
+});
+    
+
+
+$('.oda-materias li').each(function(){
+	var subjectName = $(this).text();
+	var classQuantity = $('.'+ subjectName).length;
+  $(this).find('span').text(classQuantity);
+});
+
+var noMat = 0
+
+$('.assigned-to_materias').each(function(){
+	if ($(this).has('li').length == 0) {
+        $(this).addClass('noMat');
+        noMat++;
+    }
+});
+
+$('#sinMateria').find('span').html(noMat);
+
+$('.oda-tags-list li').each(function(){
+	var tagName = $(this).text();
+	$(this).attr({
+		"data-control-type":"button-filter",
+		"data-control-action":"filter",
+        "data-selected":" false",
+        "data-control-name": tagName,
+        "data-path":"."+tagName,		
+	})
+});
+
+$.fn.ignore = function(sel){
+    return this.clone().find(sel||">*").remove().end();
+  };
+
+$('.oda-materias li').each(function(){
+	var matName =$(this).ignore("span").text();
+	$(this).attr({
+		"data-control-type":"button-filter",
+		"data-control-action":"filter",
+        "data-selected":" false",
+        "data-control-name": matName,
+        "data-path":"."+matName,		
+	})
+});

@@ -39,16 +39,18 @@ window.swal = swal;
 
 import 'selectize';
 
+// interact js
 
 import interact from 'interactjs';
 
 window.interact = interact;
 
-
-import List from 'list.js';
-
-window.List = List;
-
+// jplist
+import './jplist/jplist.core.min';
+import './jplist/jplist.pagination-bundle.min';
+import './jplist/jplist.sort-bundle.min';
+import './jplist/jplist.filter-toggle-bundle.min';
+import './jplist/jplist.textbox-filter.min';
 
 // import './lib/jquery.uploadPreview';
 
