@@ -35,4 +35,6 @@ PATHS:
     - "src/assets/js/!(tags).js"
     - "src/assets/js/!(materias).js"
     - "src/assets/js/!(odas_position).js"
+    - "src/assets/js/!(momentos).js"
+    - "src/assets/js/!(odas-edit).js"
     - "src/assets/js/!(main).js"

@@ -99,6 +99,21 @@
     }
 }
 
+.assigned-to_materias {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: .2rem;
+
+    li {
+        border: solid 1px $primary-color;
+        background-color: #dcf1ff;
+        display: inline-block;
+        padding: .2rem .8rem;
+        border-radius: 20px;
+        margin: .3rem .1rem;
+    }
+}
+
 .oda-container{
     display: inline-block;
     width: 300px;
@@ -138,20 +153,7 @@
             
         }
 
-        &_materias {
-            list-style: none;
-            margin-left: 0;
-            margin-bottom: .2rem;
-
-            li {
-                border: solid 1px $primary-color;
-                background-color: #dcf1ff;
-                display: inline-block;
-                padding: .2rem .8rem;
-                border-radius: 20px;
-                margin: .3rem .1rem;
-            }
-        }
+        
     }
 
     .activity {
@@ -179,3 +181,27 @@
 .jplist-selected {
 	color: #CA3F1A !important;
 }
+
+
+.momento-item {
+	border: 1px solid #c5dbec;
+	background: #dfeffc url("../img/jquery-ui/ui-bg_flat_85_dfeffc_40x100.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #2e6e9e;
+}
+
+.oda-sort {
+    list-style-type: none;
+    margin: 0;
+    
+    
+  }
+  
+   .oda-sort li {
+   margin: .5rem;
+   position: relative;
+   padding: .5rem;
+   cursor: grab;
+   }
+  
+ 
