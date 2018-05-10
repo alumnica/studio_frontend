@@ -49,6 +49,18 @@
     &:hover{
         opacity: 1;
     }
+
+    &__disabled {
+        opacity: .2;
+        text-decoration: line-through;
+
+        &:hover{
+            opacity: .2;
+            pointer-events: none;
+        }    
+    }
+
+     
  
 }
 .tag-length {
@@ -75,5 +87,19 @@ table {
     td {
         border-right: solid 1px $light-gray;
         vertical-align: top;
+    }
+}
+
+.remover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    transition: all .2s;
+    margin-top: .5rem;
+
+    &:hover {
+        transform: translate(0px,-2px)
+    }
+
+    .fas {
+        color: $white;
     }
 }

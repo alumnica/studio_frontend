@@ -6,9 +6,14 @@
     <p>
         <strong>Instrucciones:</strong>
         <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia ad nostrum!</p>
+        <form method="POST">
     <div class="grid-x grid-margin-x align-stretch">
+        <div class="cell medium-12">
+                <label for="oda-name">Nombre de la ODA</label>
+                <input type="text" class="oda-name" placeholder="Escoje un nombre">
+        </div>
         <div class="cell medium-6">
-
+            
             <div class="panel full">
                 <div class="panel__title">
                     Asignada a las siguientes materias:
@@ -35,147 +40,152 @@
             <p class="h6">Momentos por µODA</p>
         </div>
         <div class="cell medium-4">
-            <div class="panel">
+            <div class="panel"  id="apli">
                 <div class="panel__title">
                     Aplicación
-                    <span id="add-materia-button" class="add-materia" data-open="aplicacionModal">
+                    <span class="add-materia" data-open="Modal-1">
                         <i class="fas fa-plus-square"></i>
                     </span>
                 </div>
                 <div class="panel__content">
-                    <ul class="oda-sort" id="oda-sort-1">
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 1
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 2
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 3
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
+                    <ul class="oda-sort" id="uoda-1">
+                        
                     </ul>
                 </div>
             </div>
 
         </div>
         <div class="cell medium-4">
-            <div class="panel">
+            <div class="panel"   id="forma">
                 <div class="panel__title">
-                    Aplicación                    
+                    Formalización
+                    <span class="add-materia" data-open="Modal-1">
+                        <i class="fas fa-plus-square"></i>
+                    </span>                   
                 </div>
                 <div class="panel__content">
-                    <ul class="oda-sort" id="oda-sort-2">
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 1
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 2
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 3
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
+                    <ul class="oda-sort" id="uoda-2"></ul>
+                        
                     </ul>
                 </div>
             </div>
 
         </div>
         <div class="cell medium-4">
-            <div class="panel">
+            <div class="panel"  id="activ">
                 <div class="panel__title">
-                    Aplicación
-                    
+                    Activación
+                    <span class="add-materia" data-open="Modal-1">
+                        <i class="fas fa-plus-square"></i>
+                    </span>
                 </div>
                 <div class="panel__content">
-                    <ul class="oda-sort" id="oda-sort-3">
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 1
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 2
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="momento-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            Item 3
-                            <span class="remove_materia">
-                                <a href="#">
-                                    <i class="fas fa-minus-square"></i>
-                                </a>
-                            </span>
-                        </li>
+                    <ul class="oda-sort" id="uoda-3">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cell medium-4">
+            <div class="panel" id="ejemp">
+                <div class="panel__title">
+                    Ejemplificación
+                    <span class="add-materia" data-open="Modal-1">
+                        <i class="fas fa-plus-square"></i>
+                    </span>
+                </div>
+                <div class="panel__content">
+                    <ul class="oda-sort" id="uoda-4">
+                        
                     </ul>
                 </div>
             </div>
 
+        </div>
+        <div class="cell medium-4">
+            <div class="panel" id="sens">
+                <div class="panel__title">
+                    Sensibilzación
+                    <span class="add-materia" data-open="Modal-1">
+                        <i class="fas fa-plus-square"></i>
+                    </span>
+                </div>
+                <div class="panel__content">
+                    <ul class="oda-sort" id="uoda-5">
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell medium-4">
+            <div class="panel" id="eval">
+                <div class="panel__title">
+                    Evaluación
+                    <span class="add-materia" data-open="Modal-1">
+                        <i class="fas fa-plus-square"></i>
+                    </span>
+                </div>
+                <div class="panel__content">
+                    <ul class="oda-sort" id="uoda-6">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell medium-12 text-right" id="save-on">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="apli-momentos" name="apli-momentos">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="forma-momentos" name="forma-momentos">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="activ-momentos" name="activ-momentos">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="ejem-momentos" name="ejem-momentos">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="sens-momentos" name="sens-momentos">
+            <!-- hidden input to pass momentos and order -->
+            <input type="hidden" id="eval-momentos" name="eval-momentos">
+
+            
+            <button class="button">Guardar</button>
         </div>
     </div>
+</form>
 
 </div>
 
 
  <!-- modal Aplicacion -->
 
- <div class="reveal" id="aplicacionModal" data-reveal>
-        <h4>Selección de Momentos</h4>
-        <br>
+<div class="reveal m-adder" id="Modal-1" data-reveal>
+    <h4>Selección de Momentos</h4>
+    <br>
 
-        <label for="momentos-select">Busca en la Biblioteca de Materias</label>
-        <select name="momentos-select" id="select-momentos"></select>
+    <label for="momentos-select">Busca en la Biblioteca de Materias</label>
+    <select name="momentos-select" id="select-momentos"></select>
 
+    
+    <br />
+    <br>
+    <br>
+    <input id="momento-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="large reveal" id="Modal-2" data-reveal>
         
-        <br />
-        <br>
-        <br>
-        <input id="momento-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+    <div class="h5p-preview">
+            <iframe src="www.google.com"></iframe> 
+    </div>
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+

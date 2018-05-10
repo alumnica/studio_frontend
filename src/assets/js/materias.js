@@ -54,3 +54,40 @@ $("input[type='text']").each(function(){
         preload: false,
     });
 });
+
+
+
+
+var testList = [ 
+    {name: 'Alquimia'}, 
+    {name: 'Brujeria'}, 
+    {name: 'Astrologia'},
+    {name: 'cosa'},
+    {name: 'OTRA'},
+    {name: 'Borrador'},
+];
+
+
+var $select = $('#test-selectize').selectize({
+    maxItems: 1,
+    labelField: 'name',
+    valueField: 'name',
+    searchField: 'name',
+    options: testList,
+    
+});
+
+
+
+$("#borrar").on('click', function () {
+    var text = $("select[name='tester']").val();
+    let obj = testList.filter(x => x.name == text);
+    testList.delete(obj);
+        var selectize = $select[0].selectize;
+   			selectize.clearOptions();
+    		selectize.addOption(testList);
+});
+
+// $("#borrar").on('click', function () {
+//     control.removeOption(1)
+// });
