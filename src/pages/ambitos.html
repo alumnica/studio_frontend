@@ -7,7 +7,9 @@
 
     <div class="grid-x">
         <div class="cell medium-6">
-            <a href="ambitos-edit.html" class="button">Crear nuevo Ámbito</a>
+            <a href="ambitos-edit.html" class="button"><i class="fas fa-plus"></i> Crear nuevo Ámbito</a>
+            
+            <!-- <a href="ambitos-edit.html" class="button secondary"><i class="fas fa-th"></i> Editar posiciones</a> -->
         </div>
         
         <div class="cell medium-12">
@@ -18,10 +20,12 @@
                             <th id="titulo-ambito" class="all">Titulo</th>
                             <th id="numero-ambtio" class="not-mobile">#</th>
                             
-                            <th id="matiras-ambito" class="not-mobile">Materias</th>
+                            <th id="materias-ambito" class="not-mobile">Materias</th>
                             <th id="tags-ambito" class="not-mobile tag-length">Tags</th>
                             <th id="fecha-ambito" class="not-mobile">Fecha</th>
+                            <th id="autor-ambito" class="not-mobile">Autor</th>
                             <th id="estado-ambito" class="not-mobile">Estado</th>
+                            <th id="eva-ambito" class="not-mobile"><i class="fas fa-calendar-times"></i> EVA</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,16 +36,14 @@
                                         <strong>Propedeutico Ciencias</strong>
                                     </a>
                                 </div>
-                                <div class="title-edit-menu">
+                                <div class="title-edit-menu  title-edit-menu__disabled">
                                     <span class="editar">
                                         <a href="#">Editar</a>
                                     </span> |
                                     <span class="borrar">
                                         <a href="#">Borrar</a>
-                                    </span> |
-                                    <span class="editar-tag">
-                                        <a href="#">Editar Tags</a>
                                     </span>
+                                    
                                 </div>
                             </td>
                             <td>01</td>
@@ -63,13 +65,20 @@
                                 <div id="edit-date">
                                     07/23/2018
                                 </div>
-                                <div id="edit-type">
-                                    Editado
+                            </td>
+                            <td>
+                                <div class="autor">
+                                    Diego Cevallos
                                 </div>
                             </td>
                             <td>
                                 <div class="estado">
                                     Publicado
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="button small alert remover">
+                                    <button title="Dar de baja en EVA"><i class="fas fa-times"></i></button>
                                 </div>
                             </td>
                         </tr>
@@ -86,10 +95,8 @@
                                     </span> |
                                     <span class="borrar">
                                         <a href="#">Borrar</a>
-                                    </span> |
-                                    <span class="editar-tag">
-                                        <a href="#">Editar Tags</a>
                                     </span>
+                                    
                                 </div>
                             </td>
                             <td>02</td>
@@ -107,14 +114,20 @@
                                 <div id="edit-date">
                                     05/02/2018
                                 </div>
-                                <div id="edit-type">
-                                    Publicado
+                            </td>
+                            <td>
+                                <div class="autor">
+                                    Diego Cevallos
                                 </div>
                             </td>
                             <td>
                                 <div class="estado">
-                                    Publicado
+                                    Esperando <br>
+                                     aprovacion
                                 </div>
+                            </td>
+                            <td class="text-center">
+                                
                             </td>
                         </tr>
                         <tr>
@@ -130,10 +143,8 @@
                                     </span> |
                                     <span class="borrar">
                                         <a href="#">Borrar</a>
-                                    </span> |
-                                    <span class="editar-tag">
-                                        <a href="#">Editar Tags</a>
                                     </span>
+                                    
                                 </div>
                             </td>
                             <td>02</td>
@@ -149,14 +160,19 @@
                                 <div id="edit-date">
                                     05/02/2018
                                 </div>
-                                <div id="edit-type">
-                                    Publicado
+                            </td>
+                            <td>
+                                <div class="autor">
+                                    Diego Cevallos
                                 </div>
                             </td>
                             <td>
                                 <div class="estado">
-                                    Publicado
+                                    Borrador
                                 </div>
+                            </td>
+                            <td class="text-center">
+                                
                             </td>
                         </tr>
                     </tbody>

@@ -122,6 +122,7 @@ function javascript() {
   gulp.src('src/assets/js/odas_position.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/momentos.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/odas-edit.js').pipe(gulp.dest('dist/assets/js'));
+  gulp.src('src/assets/js/bib.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/main.js').pipe(gulp.dest('dist/assets/js'));
 
   return gulp.src(PATHS.entries)

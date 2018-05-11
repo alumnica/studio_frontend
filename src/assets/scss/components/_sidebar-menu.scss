@@ -35,7 +35,7 @@
             
             }
         li{
-            
+            position: relative;
             
             
             a{
@@ -94,6 +94,15 @@
     
 }
 
+.pub-counter{
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 6px;
+    background-color: $alert-color;
+    padding: 3px;
+    border-radius: 5px;
+}
 
 
 // .m-text{

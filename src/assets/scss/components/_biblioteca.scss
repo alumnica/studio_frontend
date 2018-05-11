@@ -1,0 +1,70 @@
+.image {
+    position: relative;
+    // border: solid 1px $light-gray;
+    padding: .5rem;
+    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        box-shadow:inset 0px 0px 10px rgba(0, 10, 153, 0.2);
+    }
+
+    .check {
+        display: block;
+        background-color: $white;
+        border: solid 3px $medium-gray;
+        // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        z-index: 50;
+        transition: all .2s;
+
+        &:hover {
+            border: solid 3px $primary-color;
+            background-color: lighten($primary-color, 50)
+        }
+    }
+    
+
+    &__thumbnail{
+        width: 100%;
+        padding-bottom: 100%;
+        background-color: $light-gray;
+        overflow: hidden;
+        position: relative;
+        
+        
+       
+
+        img{
+            position: absolute;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            
+            
+        }
+    }
+
+    &__name{
+        padding-top: .5rem;
+        color: $darker-gray
+    }
+
+}
+
+.checkbox {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 50;
+
+    input[type="checkbox"]{
+        margin: 0;
+        padding: 0;
+
+    }
+}
