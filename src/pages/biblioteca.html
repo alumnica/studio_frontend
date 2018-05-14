@@ -2,31 +2,118 @@
     <h1 class="title">
         <i class="menu-image fas fa-images"></i> Biblioteca de Imagenes </h1>
     <hr>
-    <div class="grid-x grid-padding-x grid-margin-y small-up-2 medium-up-6">
-        <div class="cell">
-            <div class="image">
+    <div id="img-jplist">
+        <div class="jplist-panel">
+            <div class="input-group">
+                <label class="busqueda-oda">Buscar: </label>
 
-                    <div class="checkbox">
-                            <input type="checkbox" id="checkbox_1">
-                            
-                        </div>
-
-                <!-- <label for="image-01" class="check"></label>
-                <input type="checkbox" id="image-01"> -->
-                <div class="image__thumbnail">
-                    <img class="img_contain" src="../assets/img/ph/bloque-01.png" alt="">
+                <input id="search-field" 
+                data-path=".image__name, .image__category" 
+                type="text" 
+                value="" 
+                class="input-group-field busqueda-input"
+                placeholder="Buscqueda" 
+                data-control-type="textbox" 
+                data-control-name="title-filter" 
+                data-control-action="filter"
+                />
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x grid-margin-y small-up-2 medium-up-6" id="box-jplist">
+            <div class="cell img-box">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox_1">
                 </div>
-                <div>
-                    <div class="image__name">
-                        seccion1.png
+                <div class="image" data-open="imgModal">
+
+
+
+                    <!-- <label for="image-01" class="check"></label>
+                    <input type="checkbox" id="image-01"> -->
+                    <div class="image__thumbnail">
+                        <img class="img_contain" src="../assets/img/ph/bloque-01.png" alt="">
+                    </div>
+                    <div class="text-center">
+                        <div class="image__name">
+                            seccion1.png
+                        </div>
+                        <div class="image__category">
+                            Materia
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="cell img-box">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox_1">
+                </div>
+                <div class="image" data-open="imgModal">
+
+
+
+                    <!-- <label for="image-01" class="check"></label>
+                        <input type="checkbox" id="image-01"> -->
+                    <div class="image__thumbnail">
+                        <img class="img_contain" src="../assets/img/ph/bloque-02.png" alt="">
+                    </div>
+                    <div class="text-center">
+                        <div class="image__name">
+                            seccion2.png
+                        </div>
+                        <div class="image__category">
+                            ODA
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
+        <!-- no results found -->
+        <div class="jplist-no-results">
+            <p>No results found</p>
+        </div>
+    </div>
 
-        
-        
+</div>
 
+<div class="reveal large imageModal" id="imgModal" data-reveal>
+    <div class="title">
+        Detalles
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="grid-x">
+        <div class="medium-9 cell text-center">
+            <div class="image-preview">
+                <img src="../assets/img/ph/bloque-01.png" alt="bloque 1">
+            </div>
+        </div>
+        <div class="medium-3 cell">
+            <div class="image-detail">
+                <ul>
+                    <li>Nombre:</li>
+                    <li>Dimensiones:</li>
+                    <li>Tamaño:</li>
+                    <li>Fecha:</li>
+                </ul>
+            </div>
+            <div class="image-attached">
+                <p>Adjunto a:</p>
+                <ul>
+                    <li>Materia:</li>
+                </ul>
+                <div class="bottom-buttons">
+                    <button class="button secondary">
+                        <i class="fa fa-download"></i> Descargar</button>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

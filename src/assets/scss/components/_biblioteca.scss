@@ -1,11 +1,17 @@
+.img-box {
+    position: relative;
+}
+
 .image {
     position: relative;
     // border: solid 1px $light-gray;
     padding: .5rem;
     box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: solid 2px transparent;
 
     &:hover {
-        box-shadow:inset 0px 0px 10px rgba(0, 10, 153, 0.2);
+        border: solid 2px $medium-gray;
+        cursor: pointer;
     }
 
     .check {
@@ -50,7 +56,15 @@
 
     &__name{
         padding-top: .5rem;
-        color: $darker-gray
+        color: $darker-gray;
+        margin-bottom: .5rem;
+    }
+
+    &__category{
+        background-color: lighten($primary-color, 50);
+        display: inline-block;
+        border-radius: 15px;
+        padding: 0 .8rem;
     }
 
 }
@@ -67,4 +81,44 @@
         padding: 0;
 
     }
+}
+
+.imageModal{
+    padding: 0;
+    position: relative;
+    ul{
+        list-style: none;
+    }
+    .title {
+        border-bottom: solid 1px $medium-gray;
+        padding: .5rem;
+        background-color: $light-gray;
+        font-size: 1.2rem;
+    }
+
+   .image-preview {
+       height: 80vh;
+       padding: 1rem;
+       border-right: solid 1px $light-gray;
+       background-color: $lighter-gray;
+
+       img{
+           height: 100%
+       }
+   }
+    
+   .image-detail {
+       border-bottom: 1px solid $light-gray;
+       padding: 1rem;
+   }
+
+   .image-attached{
+       padding: 1rem;
+
+   }
+
+   .bottom-buttons{
+       position: absolute;
+       bottom: 0;
+   }
 }
