@@ -1,77 +1,132 @@
 <div class="container dashboard">
 
 
-        <h1 class="title">
-            Crear nueva Materia
-        </h1>
-        <hr>
-    
-        <div class="grid-x">
-            <div class="cell medium-12">
-                <p class="h5">Instrucciones:</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quas delectus obcaecati aspernatur? Quis mollitia
-                    repellendus, iste obcaecati unde aliquid sunt quia, vero magnam error soluta perferendis laboriosam dolore
-                    veritatis!
-                </p>
-                <hr>
-            </div>
-            <div class="cell medium-12">
-                <form id="materia-init" method="POST">
-                    <div class="grid-x grid-margin-x">
-                        <div class="cell medium-5">
-                            <label for="titulo-materia">Titulo</label>
-                            <input id="titulo-materia" name="titulo-materia" type="text" placeholder="titulo">
-                            <label for="seleccion-ambito">Selecciona Ámbito al que pertenece esta Materia</label>
-                            <select name="seleccion-ambito">
-                                <option value="volvo">Propedeutico de Ciencias</option>
-                                <option value="volvo">Propedeutico de Cosas</option>
-                                <option value="volvo">Propedeutico de Magia</option>
-                                <option value="volvo">Prop prop prop</option>
-    
-                            </select>
-    
-                            <!-- tags -->
-    
-                            <label for="tags-materias">Tags</label>
-                            <input name="tags-materias" type="text" id="materias-tags">
-    
-                            <!-- end tags -->
-    
-                            <label>Número de secciones dentro de la materia
-                                <select class="position-ambito-size">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option selected value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </label>
-    
-                        </div>
-                        <div class="cell medium-5 medium-offset-1">
-                            
-                            <div class="panel">
-                                <div class="panel__title">Imagend de Portada</div>
-                                <div class="panel__content">
-                                    <p class="text-center light-gray">Solo archivos PNG. Tamaño maximo 150x300px</p>
-                                        <div class="grid-x grid-margin-x">
-                                                <div class="small-6 cell">
-                                                    <label for="materia-u" class="button expanded">Subir Imagen</label>
-                                                    <input id="materia-u" name="mp" type="file" class="show-for-sr">
-                                                </div>
-                                                <div class="small-6 cell">
-                                                    <a href="#" class="button expanded">Biblioteca de Imagenes</a>
-                                                </div>
-                                            </div>
-                                            <div class="materia-preview">
-                                                    <img src="#" alt="your image" />
-                                            </div> 
+    <h1 class="title">
+        Crear nueva Materia
+    </h1>
+    <hr>
+
+    <div class="grid-x">
+        <div class="cell medium-12">
+            <form id="materia-init" method="POST">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell medium-6">
+                        <label for="titulo-materia">Titulo</label>
+                        <input id="titulo-materia" name="titulo-materia" type="text" placeholder="titulo">
+
+                        <!-- tags -->
+
+                        <label for="tags-materias">Tags</label>
+                        <input name="tags-materias" type="text" id="materias-tags">
+
+                        <!-- end tags -->
+                        <br>
+                        <!-- selector de ambito -->
+                        <label for="seleccion-ambito">Selecciona Ámbito al que pertenece esta Materia</label>
+                        <select name="seleccion-ambito">
+                            <option value="volvo">Propedeutico de Ciencias</option>
+                            <option value="volvo">Propedeutico de Cosas</option>
+                            <option value="volvo">Propedeutico de Magia</option>
+                            <option value="volvo">Prop prop prop</option>
+                        </select>
+
+                        <!-- end selector de amibitos -->
+
+
+                    </div>
+                    <!-- end first column -->
+                    <div class="cell medium-6 ">
+                        <!-- panel de imagen -->
+                        <div class="panel">
+                            <div class="panel__title ">Imagend de Portada |
+                                <small>Solo archivos PNG. Tamaño maximo 150x300px</small>
+                            </div>
+                            <div class="panel__content">
+                                <div class="grid-x grid-margin-x  u-margin-bottom-small">
+                                    <div class="small-6 cell">
+                                        <label for="materia-u" class="button expanded">Subir Imagen</label>
+                                        <input id="materia-u" name="mp" type="file" class="show-for-sr">
+                                    </div>
+                                    <div class="small-6 cell">
+                                        <a href="#" class="button expanded">Biblioteca de Imagenes</a>
+                                    </div>
+                                </div>
+                                <div class="materia-preview">
+                                    <img src="#" alt="Portada de Materia" />
                                 </div>
                             </div>
-                            <!-- <button class="button expanded" type="submit">Continuar <i class="fas fa-arrow-right"></i> </button> -->
-                            <a href="materias-edit-seccion.html" class="button expanded" type="submit">Continuar
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
                         </div>
-                </form>
-                </div>
+                        <!-- end panel de imagen -->
+                    </div>
+                    <!-- end second column -->
+                    <div class="cell small-12">
+                        <hr>
+                    </div>
+                    <!-- start bloques -->
+                    <div class="cell medium-3" id="seccion-img">
+                        <div class="panel">
+                            <div class="panel__title">
+                                Bloque #1
+                            </div>
+                            <div class="panel__content">
+                                <div class="grid-x grid-margin-x">
+                                    <div class="small-6 cell">
+                                        <label for="section-u1" class="button small expanded">Subir Imagen</label>
+                                        <input id="section-u1" name="form-0-file_field" type="file" class="show-for-sr">
+                                    </div>
+                                    <div class="small-6 cell">
+                                        <a href="#" class="button expanded small">
+                                            <i class="fas fa-th"></i> Imagenes</a>
+                                    </div>
+                                </div>
+                                <div class="section-preview">
+                                    <img src="#" alt="Imagen Bloque 1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end bloque -->
+
+                    <!-- start bloque -->
+                    <div class="cell medium-3" id="seccion-img">
+                        <div class="panel">
+                            <div class="panel__title">
+                                Bloque #2
+                            </div>
+                            <div class="panel__content">
+                                <div class="grid-x grid-margin-x">
+                                    <div class="small-6 cell">
+                                        <label for="section-u2" class="button small expanded">Subir Imagen</label>
+                                        <input id="section-u2" name="form-1-file_field" type="file" class="show-for-sr">
+                                    </div>
+                                    <div class="small-6 cell">
+                                        <a href="#" class="button expanded small">
+                                            <i class="fas fa-th"></i> Imagenes</a>
+                                    </div>
+                                </div>
+                                <div class="section-preview">
+                                    <img src="#" alt="Imagen Bloque 2" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end bloque -->
+
+                    <!-- add bloque button -->
+
+                    <div class="cell medium-3 align-self-middle text-center">
+                        <button class="bloque-add-button">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                        <p><small>Añadir bloque</small></p>
+                    </div>
+                    <div class="cell medium-12">
+                        <hr>
+                        <button class="button"><i class="fa fa-save"></i> Guardar</button>
+                        &nbsp;&nbsp;
+                        <button class="button success"><i class="fa fa-check"></i> FINALIZAR</button>
+                    </div>
+
+            </form>
             </div>
+        </div>

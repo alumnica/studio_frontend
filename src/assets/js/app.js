@@ -46,8 +46,9 @@ import interact from 'interactjs';
 window.interact = interact;
 
 // jplist
-import './jplist/jplist.core.min';
+// import './jplist/jplist.core.min';
 import './jplist/jplist.core-ajax.min';
+import './jplist/jplist.preloader-control.min';
 import './jplist/jplist.pagination-bundle.min';
 import './jplist/jplist.sort-bundle.min';
 import './jplist/jplist.filter-toggle-bundle.min';
