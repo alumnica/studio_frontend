@@ -1,49 +1,37 @@
-<div class="dashboard container">
-    <!-- demo -->
-    <div id="demo">
-
-        <!-- panel -->
-        <div class="jplist-panel">
-
-            <div class="input-group">
-                <label class="busqueda-oda">Buscar: </label>
-
-                <input id="search-field" 
-                data-path="" 
-                type="text" 
-                value="" 
-                class="input-group-field busqueda-input"
-                placeholder="Buscqueda" 
-                data-control-type="textbox" 
-                data-control-name="title-filter" 
-                data-control-action="filter"
-                />
+<div class="reveal large imageModal" id="imgModal" data-reveal>
+    <div class="title">
+        Detalles
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="grid-x">
+        <div class="medium-9 cell text-center">
+            <div class="image-preview">
+                <img src="../assets/img/ph/bloque-01.png" alt="bloque 1">
             </div>
-
         </div>
-
-        <!-- HTML data -->
-        <div class="list">
-
-            <!-- item 1 -->
-            <div class="list-item">
-                <!-- any HTML structure -->
+        <div class="medium-3 cell">
+            <div class="image-detail">
+                <ul>
+                    <li>Nombre:</li>
+                    <li>Dimensiones:</li>
+                    <li>Tamaño:</li>
+                    <li>Fecha:</li>
+                </ul>
             </div>
+            <div class="image-attached">
+                <p>Adjunto a:</p>
+                <ul>
+                    <li>Materia:</li>
+                </ul>
+                <div class="bottom-buttons">
+                    <button class="button secondary">
+                        <i class="fa fa-download"></i> Descargar</button>
 
-            <!-- item 2 -->
-            <div class="list-item">
-                <!-- any HTML structure -->
+                </div>
             </div>
-
-            <!-- any number of items ... -->
-
         </div>
-
-        <!-- no results found -->
-        <div class="jplist-no-results">
-            <p>No results found</p>
-        </div>
-
     </div>
 
 </div>

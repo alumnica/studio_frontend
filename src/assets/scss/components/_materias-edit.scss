@@ -122,7 +122,13 @@ height: 510px;
     background: rgba(22, 110, 241, 0.555);
 }
 
-
+.oda-block {
+   display: inline-block;
+   background-color: $white;
+   margin: 1rem;
+   padding: .2rem;
+   position: relative;
+}
 .block {
     width: 72px;
     @include breakpoint(large){
@@ -131,14 +137,33 @@ height: 510px;
     height: 125px;
     // background: rgba(150, 40, 40, .4);
     display: inline-block;
-
+    transition: all .5s;
+   
     img{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
-
 }
+
+.block-ghost {
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 125px;
+    display: inline-block;
+    position: absolute;
+    img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .2;
+    }
+}
+
+
+
 .oda-desc {
     display: inline-block;
     vertical-align: top;
@@ -201,3 +226,19 @@ height: 510px;
         
     }
 }
+
+.delete-bloque {
+    float: right;
+    border: solid 1px $light-gray;
+    border-radius: 5px;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    padding-top: 2px;
+
+    &:hover {
+        background-color: rgb(233, 99, 99);
+        color: $white;
+        cursor: pointer;
+    }
+  }

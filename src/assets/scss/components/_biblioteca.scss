@@ -54,13 +54,13 @@
         }
     }
 
-    &__name{
+    .file_field{
         padding-top: .5rem;
         color: $darker-gray;
         margin-bottom: .5rem;
     }
 
-    &__category{
+    .folder_field{
         background-color: lighten($primary-color, 50);
         display: inline-block;
         border-radius: 15px;
@@ -72,8 +72,8 @@
 .checkbox {
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: -5px;
+    right: 1rem;
     z-index: 50;
 
     input[type="checkbox"]{

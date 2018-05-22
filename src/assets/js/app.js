@@ -54,7 +54,9 @@ import './jplist/jplist.sort-bundle.min';
 import './jplist/jplist.filter-toggle-bundle.min';
 import './jplist/jplist.textbox-filter.min';
 
-// import './lib/jquery.uploadPreview';
+// handlebars for jplist serverside
+
+import 'handlebars/dist/handlebars.min.js';
 
 $(document).foundation();
 

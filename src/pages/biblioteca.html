@@ -3,26 +3,33 @@
         <i class="menu-image fas fa-images"></i> Biblioteca de Imagenes </h1>
     <hr>
     <div id="img-jplist">
-        <div class="jplist-panel">
-            <div class="input-group">
-                <label class="busqueda-oda">Buscar: </label>
+        <div class="grid-x grid-margin-x">
+            <div class="cell medium-8">
 
-                <input id="search-field" 
-                data-path=".image__name, .image__category" 
-                type="text" 
-                value="" 
-                class="input-group-field busqueda-input"
-                placeholder="Buscqueda" 
-                data-control-type="textbox" 
-                data-control-name="title-filter" 
-                data-control-action="filter"
-                />
+            </div>
+            <div class="cell medium-4">
+                <div class="jplist-panel">
+                    <div class="input-group">
+                        <label class="busqueda-oda">Buscar: </label>
+        
+                        <input id="search-field" 
+                        data-path=".image__name, .image__category" 
+                        type="text" 
+                        value="" 
+                        class="input-group-field busqueda-input"
+                        placeholder="Buscqueda" 
+                        data-control-type="textbox" 
+                        data-control-name="title-filter" 
+                        data-control-action="filter"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="grid-x grid-padding-x grid-margin-y small-up-2 medium-up-6" id="box-jplist">
+        <div class="grid-x grid-padding-x grid-margin-y small-up-2 medium-up-6 list">
             <div class="cell img-box">
                 <div class="checkbox">
-                    <input type="checkbox" id="checkbox_1">
+                    <input type="checkbox">
                 </div>
                 <div class="image" data-open="imgModal">
 
@@ -44,30 +51,6 @@
                 </div>
             </div>
 
-            <div class="cell img-box">
-                <div class="checkbox">
-                    <input type="checkbox" id="checkbox_1">
-                </div>
-                <div class="image" data-open="imgModal">
-
-
-
-                    <!-- <label for="image-01" class="check"></label>
-                        <input type="checkbox" id="image-01"> -->
-                    <div class="image__thumbnail">
-                        <img class="img_contain" src="../assets/img/ph/bloque-02.png" alt="">
-                    </div>
-                    <div class="text-center">
-                        <div class="image__name">
-                            seccion2.png
-                        </div>
-                        <div class="image__category">
-                            ODA
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
 
 
@@ -79,6 +62,51 @@
     </div>
 
 </div>
+
+
+
+{% verbatim %}
+<script id="jplist-template" type="text/x-handlebars-template">
+
+    {{#each this}}
+
+      <div class="list-item box">
+
+            <p class="titlee">{{name_field}}</p>
+
+      </div>
+
+
+
+<div class="cell img-box">
+    <div class="checkbox">
+        <input type="checkbox">
+    </div>
+    <div class="image" data-open="imgModal">
+
+
+
+        <!-- <label for="image-01" class="check"></label>
+            <input type="checkbox" id="image-01"> -->
+        <div class="image__thumbnail">
+            <img class="img_contain" src="{{file_field}} alt="">
+        </div>
+        <div class="text-center">
+            <div class="file_field">
+                seccion1.png
+            </div>
+            <div class="folder_field">
+                    {{name_field}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/each}}
+</script>
+{% endverbatim %}
+
+
 
 <div class="reveal large imageModal" id="imgModal" data-reveal>
     <div class="title">

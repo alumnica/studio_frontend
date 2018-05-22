@@ -43,6 +43,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.2.0",
     "gulp-uncss": "^1.0.1",
+    "handlebars": "^4.0.11",
     "jquery-ui": "^1.12.1",
     "jquery.alphanum": "^1.0.26",
     "js-yaml": "^3.4.6",

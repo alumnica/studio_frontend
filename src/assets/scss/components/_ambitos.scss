@@ -91,12 +91,12 @@ table {
 }
 
 .remover {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    // box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
     transition: all .2s;
     margin-top: .5rem;
 
     &:hover {
-        transform: translate(0px,-2px)
+        
     }
 
     .fas {

@@ -36,6 +36,7 @@ interact('.block')
                         targets: [startPos]
                     }
                 });
+                
             },
        
 		
@@ -59,7 +60,7 @@ interact('.block')
   }
 
   function revertBack(event) {
-    var target = event.target;
+    var target = event.relatedTarget;
     target.style.webkitTransform =
     target.style.transform =
     'translate(0px, 0px)';
@@ -101,7 +102,6 @@ interact('.block')
     ondragleave: function (event) {
 		// when leaving a dropzone, snap to the start position
 		
-		
 
 		// remove the drop feedback style
         event.target.classList.remove('drop-target');
@@ -133,6 +133,9 @@ interact('.block')
         });    
     }
   });
+  
+	
+
 });
 
 
@@ -149,6 +152,8 @@ $(document).ready(function () {
             })
         );
     });
+
+    
 });
 
 $(document).ready(function () {

@@ -1,37 +1,29 @@
-// $('document').ready(function(){
-        
-//     $('#img-jplist').jplist({				
-//         itemsBox: '#box-jplist', 
-//         itemPath: '.img-box', 
-//         panelPath: '.jplist-panel'	
-//     });  
-    
-// });
 
 
+    // $('document').ready(function () {
+    //     $('#img-jplist').jplist({				
+    //         itemsBox: '#box-jplist', 
+    //         itemPath: '.img-box', 
+    //         panelPath: '.jplist-panel'
 
-// <!-- Example of JavaScript options for PHP server side -->
+    //         //data source
+    //         , dataSource: {
 
-// $('document').ready(function(){
-//    $('#demo').jplist({
-   
-//       itemsBox: '.list' 
-//       ,itemPath: '.list-item' 
-//       ,panelPath: '.jplist-panel'
-      
-//       //data source
-//       ,dataSource: {
-         
-//          type: 'server'
-//          ,server: {
-         
-//             //jQuery ajax settings
-//             ajax:{
-//               url: 'server.php'
-//               ,dataType: 'html'
-//               ,type: 'POST'
-//             }
-            
-//        }
-//    });
-// });
+    //             type: 'server'
+    //             , server: {
+
+    //                 //jQuery ajax settings
+    //                 ajax: {
+    //                     url: '/api/images/'
+    //                     , dataType: 'json'
+    //                     , type: 'GET'
+    //                     , contentType: 'application/json'
+    //                 }
+
+    //             }
+    //             , render: function (dataItem, statuses) {
+    //                 $list.html(template(dataItem.content));
+    //             }
+    //         }
+    //     });
+    // });
