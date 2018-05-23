@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(".block").draggable({
         revert: "invalid",
-        cursor: "grab",
+        // cursor: "grab",
         containment: '#ovc',
         // snap: '#dpp',
         // snapMode: "inner",
@@ -83,4 +83,24 @@ $(document).ready(function () {
         });
     });
     
+});
+
+
+$(document).ready(function () {
+	
+	$("#section-1 img").each(function(){
+		$(this).appendTo("#"+(this.getAttribute('data-n')));
+    });
+    
+    $("#section-2 img").each(function(){
+		$(this).appendTo("#"+(this.getAttribute('data-n')));
+    });
+    
+    $("#section-3 img").each(function(){
+		$(this).appendTo("#"+(this.getAttribute('data-n')));
+	});
+
+	$("#section-4 img").each(function(){
+		$(this).appendTo("#"+(this.getAttribute('data-n')));
+	});
 });

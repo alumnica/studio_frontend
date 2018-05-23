@@ -35,34 +35,24 @@
 // drag and drop area
 
 .canvas {
-    position: relative;
-
-    .drop-bg {
-        position: absolute;
-        left: 0;
-        height: 500px;
-        width: 300px;
-    }
-}
-
-.drop-bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 311px;
+    
     height: 500px;
-    z-index: -10;
+    width: 300px
+
+
 }
+
 
 .frame {
     list-style: none;
     margin: 0;
     float: left;
+    
 
     li {
         height: 125px;
         width: 75px;
-        border: solid 2px rgb(185, 185, 185);
+        border: dashed 1px rgb(185, 185, 185);
     }
 }
 
@@ -70,11 +60,38 @@
 .oda-list {
     list-style: none;
     margin: 0;
+    position: relative;
+}
+
+.oda-block{
+    position: relative;
+    background-color: $white;
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    float: left;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 130px;
+    margin: 2rem 1rem 2rem 1rem;
+    // &-img{
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     padding: .3rem;
+    //     opacity: .3;;
+    // }
+
+    
 }
 
 
 .block {
-
+    // background-color: gray;
+    position: absolute;
+    top: 10;
     width: 72px;
     @include breakpoint(large){
         width: 75px;
@@ -85,6 +102,7 @@
     // transition: all .5s;
     padding: .3rem;
     position: relative;
+    
    
     img{
         position: relative;
@@ -107,6 +125,7 @@
     }
 
     &:hover {
+        cursor:grab;
         .return-button {
             display: block;
         }
@@ -115,17 +134,18 @@
 
 
 .shadow-block {
+    // pointer-events:none;
     position: absolute;
     top: 0;
-    z-index: -10;
+    // z-index: -10;
     width: 72px;
     @include breakpoint(large){
         width: 75px;
     }
     padding: .3rem;
     height: 125px;
-    opacity: .4;
-    background-color: white;
+    // opacity: .4;
+    // background-color: blue;
 
     img{
         position: relative;
@@ -134,19 +154,7 @@
     }
 
 }
-.oda-block{
-    position: relative;
-    
-    float: left;
-    width: 72px;
-    @include breakpoint(large){
-        width: 75px;
-    }
-    height: 130px;
-    margin: 2rem 1rem 2rem 1rem;
 
-    
-}
 
 
 .dropzone .block .oda-desc {
