@@ -41,9 +41,9 @@ import 'selectize';
 
 // interact js
 
-import interact from 'interactjs';
+// import interact from 'interactjs';
 
-window.interact = interact;
+// window.interact = interact;
 
 // jplist
 // import './jplist/jplist.core.min';

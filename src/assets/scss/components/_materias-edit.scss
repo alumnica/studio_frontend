@@ -32,213 +32,145 @@
 }
 
 
-.img-preview-a{
-    border: solid 1px $medium-gray;
-    overflow: hidden;
-    height: 8rem;
-    width: 7rem;
-    
-    margin: 0 auto;
-    
+// drag and drop area
+
+.canvas {
+    position: relative;
+
+    .drop-bg {
+        position: absolute;
+        left: 0;
+        height: 500px;
+        width: 300px;
+    }
 }
-
-
-.img-preview-b{
-    border: solid 1px $medium-gray;
-    overflow: hidden;
-    height: 8rem;
-    width: 7rem;
-    
-    margin: 0 auto;
-    
-}
-
-
-.img-preview-button{
-    display: inline-block;
-    border: solid 1px black;
-    width: 68%;
-    height: 8rem;
-    margin: 0;
-    
-}
-
-// drag and drop test
 
 .drop-bg {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 300px;
+    bottom: 0;
+    width: 311px;
     height: 500px;
+    z-index: -10;
 }
 
-
-.canvas {
-position: relative;
-height: 510px;
-
-
-    .frame {
-    position: relative;
+.frame {
+    list-style: none;
+    margin: 0;
     float: left;
-    // top: 100px;
-    // left: 200px;
-    width: 72px;
-    @include breakpoint(large){
+
+    li {
+        height: 125px;
         width: 75px;
-    }
-    height: 500px;
-    // border: 1px solid black;
-    border-top: 0;
-    border-bottom: 0;
+        border: solid 2px rgb(185, 185, 185);
     }
 }
 
-.canvas .frame .dropzone,
-.canvas .frame .empty {
-    position: relative;
-    width: 72px;
-    @include breakpoint(large){
-        width: 75px;
-    }
-    height: 125px;
-    // background: ;
+
+.oda-list {
+    list-style: none;
+    margin: 0;
 }
 
-.canvas .frame .dropzone:before {
-    content: "";
-    display: block;
-    height: 20px;
-    width: 20px;
-    background: #bbb;
-    border-radius: 20px;
-    position: relative;
-    left: 25px;
-    top: 50px;
-}
 
-.canvas .frame .dropzone.drop-target {
-    background: rgba(22, 110, 241, 0.555);
-}
-
-.oda-block {
-   display: inline-block;
-   background-color: $white;
-   margin: 1rem;
-   padding: .2rem;
-   position: relative;
-}
 .block {
+
     width: 72px;
     @include breakpoint(large){
         width: 75px;
     }
     height: 125px;
     // background: rgba(150, 40, 40, .4);
-    display: inline-block;
-    transition: all .5s;
+    // display: inline-block;
+    // transition: all .5s;
+    padding: .3rem;
+    position: relative;
    
     img{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .return-button {
+        background-color: red;
+        border: solid 1px $darker-gray;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        font-size: .6rem;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        display: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        .return-button {
+            display: block;
+        }
+    }
 }
 
-.block-ghost {
+
+.shadow-block {
+    position: absolute;
+    top: 0;
+    z-index: -10;
     width: 72px;
     @include breakpoint(large){
         width: 75px;
     }
+    padding: .3rem;
     height: 125px;
-    display: inline-block;
-    position: absolute;
+    opacity: .4;
+    background-color: white;
+
     img{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        opacity: .2;
     }
+
+}
+.oda-block{
+    position: relative;
+    
+    float: left;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 130px;
+    margin: 2rem 1rem 2rem 1rem;
+
+    
 }
 
 
+.dropzone .block .oda-desc {
+    display: none;
+}
+
+.dropOn{ 
+    background-color: rgba(53, 153, 247, 0.445);
+}
+
+.drop-hover{
+    background-color: rgba(3, 202, 3, 0.493);
+}
 
 .oda-desc {
-    display: inline-block;
-    vertical-align: top;
-    margin: 3rem 1rem;
-    font-size: 1.3rem;
-
-
-}
-
-.drop-area {
-    position: relative;
-    width: 72px;
-    @include breakpoint(large){
-        width: 75px;
-    }
-    height: 125px;
-    // background: ;
-    img{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-.drop-active {
-    // border: solid 2px white;
-}
-
-.section-block {
-    display: block;
-}
-
-.can-drop{
-    border: solid 3px white;
-}
-
-.bgred {
-    background-color: red;
-}
-
-.bloque-add-button {
-    background-color: $primary-color;
-    width: 5rem;
-    height: 5rem;
-    border-radius: .5rem;
-    font-size: 2rem;
-    color: white;
-
-    &:hover {
-        box-shadow: 5px 5px 7px rgba(#000, .25);
-        transform: translate(-2px, -2px);
-        background-color: lighten($primary-color, 5);
-        cursor: pointer;
-    }
-
-    &:active {
-        transform: translate(0);
-        background-color: darken($primary-color, 10);
-        box-shadow: none;
-        
-    }
-}
-
-.delete-bloque {
-    float: right;
-    border: solid 1px $light-gray;
-    border-radius: 5px;
-    width: 2rem;
-    height: 2rem;
+    font-size: .8rem;
+    background-color: $light-gray;
     text-align: center;
-    padding-top: 2px;
 
-    &:hover {
-        background-color: rgb(233, 99, 99);
-        color: $white;
-        cursor: pointer;
-    }
-  }
+    position: absolute;
+    top: 100%;
+    ;
+}
+
+
+
+
