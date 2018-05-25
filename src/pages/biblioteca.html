@@ -38,7 +38,7 @@
                     <!-- <label for="image-01" class="check"></label>
                     <input type="checkbox" id="image-01"> -->
                     <div class="image__thumbnail">
-                        <img class="img_contain" src="../assets/img/ph/bloque-01.png" alt="">
+                        <img class="img_contain" src="assets/img/ph/bloque-01.png" alt="">
                     </div>
                     <div class="text-center">
                         <div class="image__name">
@@ -65,7 +65,7 @@
 
 
 
-{% verbatim %}
+<!-- {% verbatim %}
 <script id="jplist-template" type="text/x-handlebars-template">
 
     {{#each this}}
@@ -82,12 +82,12 @@
     <div class="checkbox">
         <input type="checkbox">
     </div>
-    <div class="image" data-open="imgModal">
+    <div class="image" data-open="imgModal"> -->
 
 
 
         <!-- <label for="image-01" class="check"></label>
-            <input type="checkbox" id="image-01"> -->
+            <input type="checkbox" id="image-01">
         <div class="image__thumbnail">
             <img class="img_contain" src="{{file_field}} alt="">
         </div>
@@ -104,7 +104,7 @@
 
 {{/each}}
 </script>
-{% endverbatim %}
+{% endverbatim %} -->
 
 
 
@@ -117,23 +117,20 @@
     </div>
     <div class="grid-x">
         <div class="medium-9 cell text-center">
-            <div class="image-preview">
-                <img src="../assets/img/ph/bloque-01.png" alt="bloque 1">
+            <div class="image-selected">
+                <img src="../assets/img/ph/tuerca-01.png" alt="bloque 1">
             </div>
         </div>
         <div class="medium-3 cell">
             <div class="image-detail">
                 <ul>
-                    <li>Nombre:</li>
-                    <li>Dimensiones:</li>
-                    <li>Tamaño:</li>
-                    <li>Fecha:</li>
+                    <li id="nombre">Nombre:</li>
+                    <li id="fecha">Fecha:</li>
                 </ul>
             </div>
             <div class="image-attached">
-                <p>Adjunto a:</p>
                 <ul>
-                    <li>Materia:</li>
+                    <li id="adjuntoa"></li>
                 </ul>
                 <div class="bottom-buttons">
                     <button class="button secondary">

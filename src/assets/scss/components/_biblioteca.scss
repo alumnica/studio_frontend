@@ -96,14 +96,19 @@
         font-size: 1.2rem;
     }
 
-   .image-preview {
-       height: 80vh;
+   .image-selected {
+       @include breakpoint(medium){
+        height: 80vh;
+       }
+       
        padding: 1rem;
        border-right: solid 1px $light-gray;
        background-color: $lighter-gray;
 
        img{
-           height: 100%
+          background-color: $white;
+          padding: .3rem;
+          border: solid 1px $medium-gray;
        }
    }
     
