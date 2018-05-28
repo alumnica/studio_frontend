@@ -45,18 +45,24 @@
   <script src="{{root}}assets/js/app.js"></script>
   <script src="{{root}}assets/js/main.js"></script>
   
-  <!-- <script src="{{root}}assets/js/materias.js"></script>
-  <script src="{{root}}assets/js/tags.js"></script> -->
+  {{#ifpage 'materias-edit'}}
+  <script src="{{root}}assets/js/materias.js"></script>
+  {{/ifpage}}
+  <script src="{{root}}assets/js/tags.js"></script>
 
   {{#ifpage 'materias-edit-position'}}
   <script src="{{root}}assets/js/odas_position.js"></script>
   {{/ifpage}}
 
-  
-  <!-- <script src="{{root}}assets/js/momentos.js"></script>
+  {{#ifpage 'oda-edit'}}
+  <script src="{{root}}assets/js/momentos.js"></script>
+  {{/ifpage}}
+  <!-- {{#ifpage 'materias-edit-position'}}
   <script src="{{root}}assets/js/odas-edit.js"></script>
-  <script src="{{root}}assets/js/bib.js"></script> -->
-  
+  {{/ifpage}} -->
+  <!-- {{#ifpage 'biblioteca'}}
+  <script src="{{root}}assets/js/bib.js"></script>
+  {{/ifpage}} -->
   
 </body>
 

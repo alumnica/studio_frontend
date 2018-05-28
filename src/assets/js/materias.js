@@ -58,24 +58,24 @@ $("input[type='text']").each(function(){
 
 
 
-var testList = [ 
-    {name: 'Alquimia'}, 
-    {name: 'Brujeria'}, 
-    {name: 'Astrologia'},
-    {name: 'cosa'},
-    {name: 'OTRA'},
-    {name: 'Borrador'},
-];
+// var testList = [ 
+//     {name: 'Alquimia'}, 
+//     {name: 'Brujeria'}, 
+//     {name: 'Astrologia'},
+//     {name: 'cosa'},
+//     {name: 'OTRA'},
+//     {name: 'Borrador'},
+// ];
 
 
-var $select = $('#test-selectize').selectize({
-    maxItems: 1,
-    labelField: 'name',
-    valueField: 'name',
-    searchField: 'name',
-    options: testList,
+// var $select = $('#test-selectize').selectize({
+//     maxItems: 1,
+//     labelField: 'name',
+//     valueField: 'name',
+//     searchField: 'name',
+//     options: testList,
     
-});
+// });
 
 
 
