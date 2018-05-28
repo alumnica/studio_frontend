@@ -36,8 +36,8 @@
 
 .canvas {
     
-    height: 500px;
-    width: 300px
+    background-size: cover;
+    max-width: 310px;
 
 
 }
@@ -46,12 +46,13 @@
 .frame {
     list-style: none;
     margin: 0;
-    float: left;
+    display: flex;
     
 
-    li {
+    .dropzone {
+        flex: 1;
         height: 125px;
-        width: 75px;
+       
         border: dashed 1px rgb(185, 185, 185);
     }
 }
