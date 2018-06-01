@@ -58,5 +58,6 @@ $('#materias-tags').selectize({
     options: materiasTags,
     preload: false,
     maxItems: 20,
+    maxOptions: 4
 });
 
