@@ -9,8 +9,9 @@
 
 .section-preview{
     border: solid 1px $medium-gray;
-    min-height: 400px;
-    width: 100%;
+    min-height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .materia-preview{
@@ -178,6 +179,18 @@
     position: absolute;
     top: 100%;
     ;
+}
+
+.bloque-add-button {
+    background-color: $primary-color;
+    color: $white;
+    padding: 1rem;
+    border-radius: 3px;
+    transition: all .2s;
+    &:hover {
+        background-color: darken($primary-color, 15%);
+        cursor: pointer;
+    }
 }
 
 

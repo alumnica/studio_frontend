@@ -36,6 +36,7 @@
             }
         li{
             position: relative;
+            margin-bottom: .4rem;
             
             
             a{
@@ -62,8 +63,10 @@
 
 .logout {
     position: absolute;
+    display: block;
     bottom: 3rem;
     width: 100%;
+    
     
     li{
         a{
@@ -81,13 +84,18 @@
     }
     
 }
+.version {
+    text-align: center;
+    color: $dark-gray;
+    // padding-right: .5rem;
+}
 
 
 
 .menu-image {
     float: left;
     width: 36px;
-    height: 34px;
+    height: 20px;
     margin: 0;
     text-align: center;
     

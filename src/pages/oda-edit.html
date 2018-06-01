@@ -24,13 +24,13 @@
                             <div class="grid-x grid-margin-x">
                                 <div class="cell small-6">
                                     <div class="oda-a-preview">
-                                        <img src="#" alt="ODA A" />
+                                        <img src="#" alt="ODA A"/>
                                     </div>
                                 </div>
                                 <div class="cell small-6 align-self-middle">
                                     <label for="oda-a" class="button small expanded">Subir Imagen</label>
                                     <input id="oda-a" name="oda-a" type="file" class="show-for-sr">
-                                    
+
                                     <button type="button" class="button expanded small">
                                         <i class="fa fa-th"></i> Imagenes
                                     </button>
@@ -39,26 +39,26 @@
                         </div>
                     </div>
                     <div class="cell medium-6">
-                            <div class="panel">
-                                    <div class="panel__title">
-                                        Imagen B
-                                    </div>
-                                    <div class="grid-x grid-margin-x">
-                                        <div class="cell small-6">
-                                            <div class="oda-b-preview">
-                                                <img src="#" alt="ODA B" />
-                                            </div>
-                                        </div>
-                                        <div class="cell small-6 align-self-middle">
-                                            <label for="oda-b" class="button small expanded">Subir Imagen</label>
-                                           <input id="oda-b" name="oda-b" type="file" class="show-for-sr">
-
-                                            <button type="button" class="button expanded small">
-                                                <i class="fa fa-th"></i> Imagenes
-                                            </button>
-                                        </div>
+                        <div class="panel">
+                            <div class="panel__title">
+                                Imagen B
+                            </div>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell small-6">
+                                    <div class="oda-b-preview">
+                                        <img src="#" alt="ODA B" />
                                     </div>
                                 </div>
+                                <div class="cell small-6 align-self-middle">
+                                    <label for="oda-b" class="button small expanded">Subir Imagen</label>
+                                    <input id="oda-b" name="oda-b" type="file" class="show-for-sr">
+
+                                    <button type="button" class="button expanded small">
+                                        <i class="fa fa-th"></i> Imagenes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -84,12 +84,12 @@
                         Solo se muestran los bloques que tengan espacio disponubles para añadir una oda.
                     </p>
                     <select name="bloque-a-oda">
-                            <option disabled selected></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
+                        <option disabled selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
 
                 </div>
             </div>
@@ -180,7 +180,7 @@
                 <div class="panel" id="eval">
                     <div class="panel__title">
                         Evaluación
-                        <span class="add-materia" data-open="Modal-1">
+                        <span class="add-eval" data-open="evalModal">
                             <i class="fas fa-plus-square"></i>
                         </span>
                     </div>
@@ -207,9 +207,11 @@
                 <input type="hidden" id="eval-momentos" name="eval-momentos">
 
 
-                <button class="button"><i class="fa fa-save"></i> Guardar</button>
+                <button class="button">
+                    <i class="fa fa-save"></i> Guardar</button>
                 &nbsp;
-                <button class="button success"><i class="fa fa-check"></i> FINALIZAR</button>
+                <button class="button success">
+                    <i class="fa fa-check"></i> FINALIZAR</button>
             </div>
         </div>
     </form>
@@ -247,4 +249,27 @@
     <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
     </button>
+</div>
+
+<div class="reveal" id="evalModal" data-reveal="">
+    <h4>Seleccion de Evaluaciones</h4>
+    <br>
+
+    <label for="eval-select">Busca en la Biblioteca de Evaluaciones</label>
+    <select name="eval-select" id="eval-select">
+        <option value=""></option>
+        <option value="Evaluación 1">Evaluación 1</option>
+        <option value="Evaluación 2">Evaluación 2</option>
+    </select>
+
+
+    <br />
+    <br>
+    <br>
+    <input id="eval-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
 </div>
