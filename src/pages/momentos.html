@@ -1,6 +1,6 @@
 <div class="container dashboard">
     <h1 class="title">
-        <i class="fas fa-play-circle"></i> Materias </h1>
+        <i class="fas fa-play-circle"></i> Momentos </h1>
     <hr>
     <div class="grid-x">
         <div class="cell medium-6">
@@ -8,7 +8,7 @@
         </div>
         <div class="cell medium-12">
             <div class="panel">
-                <table id="tabla-materias" class=" no-wrap">
+                <table id="tabla-momentos" class=" no-wrap">
                     <thead>
                         <tr>
                             <th id="titulo-momento" class="all">Titulo</th>
@@ -85,6 +85,13 @@
                 <small>Paquete H5P</small>
             </h4>
             <div class="grid-x">
+                <div class="cell small-12 u-margin-bottom-small">
+                    <label for="h5p-name">Nombre</label>
+                    <input type="text" id="h5p-name">
+                    <!-- assign oda -->
+                    <label for="oda-list">Busca en la Biblioteca de ODAs</label>
+                    <select name="oda-list" id="oda-list"></select>
+                </div>
                 <div class="cell medium-4">
                     <label for="h5p-upload" class="button">
                         <i class="fa fa-upload"></i> Subir Paquete</label>
@@ -96,6 +103,9 @@
                     </p>
                 </div>
                 <div class="cell medium-12">
+                    <!-- tipo de momento -->
+                    <label for="tipo-momento">Selecciona el tipo de Momento</label>
+                    <select name="tipo-momento" id="tipo-momento"></select>
                     <!-- tags -->
 
                     <label for="tags-momento">Tags</label>
