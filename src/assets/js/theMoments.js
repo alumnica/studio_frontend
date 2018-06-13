@@ -5,7 +5,7 @@ $('#h5p-upload').change( function(){
 });
 
 
-// Tags Materias
+// Tags momento
 
 var momentoTags = [
     {name: 'tag2', value: 't2'},
@@ -34,4 +34,45 @@ $('#momento-tags').selectize({
     preload: false,
     maxItems: 20,
     maxOptions: 3,
+});
+
+// list of ODAs
+
+var odaList = [ 
+    {name: 'ODA A'}, 
+    {name: 'Yolo'}, 
+    {name: 'Yo Mama'},
+];
+
+$('#oda-list').selectize({
+    maxItems: 1,
+    labelField: 'name',
+    valueField: 'name',
+    searchField: 'name',
+    options: odaList,
+    preload: true,
+});
+
+
+// list of tipos de momentos
+
+var typeList = [ 
+    {name: 'Tipo A'}, 
+    {name: 'Tipo B'}, 
+    {name: 'Tipo C'}, 
+    {name: 'Tipo D'}, 
+    {name: 'Tipo E'}, 
+    {name: 'Tipo F'}, 
+    {name: 'Tipo G'}, 
+    
+];
+
+$('#tipo-momento').selectize({
+    maxItems: 1,
+    labelField: 'name',
+    valueField: 'name',
+    searchField: 'name',
+    options: typeList,
+    preload: true,
+    maxOptions: 4,
 });
