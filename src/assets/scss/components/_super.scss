@@ -1,0 +1,29 @@
+.sup-mat{
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: .9rem;
+}
+
+.vista-previa{
+  
+}
+
+/* Bryant Web Bold */
+@font-face {
+    font-family: 'Bryant';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/BryantPro-Bold.otf");
+}
+
+.card-front {
+    width: 320px;
+    display: inline-block
+}
+
+.card-back{
+    display: inline-block;
+    width: 320px;
+
+}
