@@ -1,7 +1,7 @@
 .grid {
     position: relative;
 }
-.item {
+.m-item {
 display: block;
 position: absolute;
 width: 200px;
@@ -12,13 +12,13 @@ z-index: 1;
 // color: #fff;
 border: solid 1px $light-gray;
 }
-.item.muuri-item-dragging {
+.m-item.muuri-item-dragging {
 z-index: 3;
 }
-.item.muuri-item-releasing {
+.m-item.muuri-item-releasing {
 z-index: 2;
 }
-.item.muuri-item-hidden {
+.m-item.muuri-item-hidden {
 z-index: 0;
 }
 .item-content {
@@ -44,10 +44,10 @@ height: 100%;
     margin: 0 auto;
 }
 
-.item.muuri-item-dragging .item-content {
+.m-item.muuri-item-dragging .item-content {
     background: rgba(151, 151, 151, 0.5);
 }
-.item.muuri-item-releasing .item-content {
+.m-item.muuri-item-releasing .item-content {
 background: blueViolet;
 }
 

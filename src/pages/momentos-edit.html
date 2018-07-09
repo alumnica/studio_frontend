@@ -1,0 +1,64 @@
+<div class="container dashboard">
+    <h1 class="title">
+        <i class="fas fa-play-circle"></i> Momento
+       
+    </h1>
+    <hr>
+
+    <form id="uploadForm">
+        <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell medium-6">
+                <label for="h5p-name">Nombre</label>
+                <input type="text" id="h5p-name">
+                <!-- assign oda -->
+                <label for="oda-list">Busca en la Biblioteca de ODAs</label>
+                <select name="oda-list" id="oda-list"></select>
+
+
+
+                <!-- tipo de momento -->
+                <label for="tipo-momento">Selecciona el tipo de Momento</label>
+                <select name="tipo-momento" id="tipo-momento"></select>
+                <!-- tags -->
+
+                <label for="tags-momento">Tags</label>
+                <input name="tags-momento" type="text" id="momento-tags">
+
+                <!-- end tags -->
+                
+            </div>
+            <div class="cell medium-6">
+                <div class="panel">
+                    <div class="panel__title">
+                        Paquete H5P
+                    </div>
+                    <div class="grid-x grid-margin-x grid-margin-y">
+                        <div class="cell medium-6">
+                            <label for="h5p-upload" class="button expanded">
+                                <i class="fa fa-upload"></i> Subir Paquete</label>
+                            <input id="h5p-upload" name="h5p-upload" type="file" class="show-for-sr">
+                        </div>
+                        <div class="cell medium-6">
+                            <p class="h5 thefile" id="fileName">
+                                <small>Filename</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="cell medium-12">
+               <hr>
+                <button type="submit" class="button">
+                <i class="fa fa-save"></i> Guardar Momento</button>
+           </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+<!-- makes sidebar menu active -->
+<script>
+        document.querySelector('#momento-nav').classList.add("is-active");
+    </script>
