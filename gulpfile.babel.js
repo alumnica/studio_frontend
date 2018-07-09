@@ -117,6 +117,7 @@ let webpackConfig = {
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript() {
+  gulp.src('src/assets/js/vp-materia.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/tags.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/theMoments.js').pipe(gulp.dest('dist/assets/js'));
   gulp.src('src/assets/js/materias.js').pipe(gulp.dest('dist/assets/js'));

@@ -40,3 +40,4 @@ PATHS:
     - "src/assets/js/!(bib).js"
     - "src/assets/js/!(theMoments).js"
     - "src/assets/js/!(main).js"
+    - "src/assets/js/!(vp-materia).js"

@@ -1,0 +1,431 @@
+.grid {
+    position: relative;
+}
+.item {
+display: block;
+position: absolute;
+width: 200px;
+height: 200px;
+margin: 5px;
+z-index: 1;
+// background: #000;
+// color: #fff;
+border: solid 1px $light-gray;
+}
+.item.muuri-item-dragging {
+z-index: 3;
+}
+.item.muuri-item-releasing {
+z-index: 2;
+}
+.item.muuri-item-hidden {
+z-index: 0;
+}
+.item-content {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.tall {
+    height: 200px;
+}
+
+.taller {
+    height: 275px;
+}
+.tallest {
+    height: 350px;
+}
+
+.container-of-grid{
+    max-width: 1000px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.item.muuri-item-dragging .item-content {
+    background: rgba(151, 151, 151, 0.5);
+}
+.item.muuri-item-releasing .item-content {
+background: blueViolet;
+}
+
+
+
+.ambito-image {
+    height: 100%;
+    overflow: hidden;
+    img {
+     display: block;
+     // margin:0 auto;
+     object-fit: cover;
+     height: 100%;
+     width: 100%
+    }
+   }
+ 
+   .ambito-title {
+     position: absolute;
+     bottom: 5%;
+     left: 5%;
+     
+}
+
+.amarillo{
+    background-color: #fae96a;
+    
+
+    &_text{
+      background-color:#7252AA;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+      margin-top: 1.5rem;
+      color: $white;
+      background-color:#7252AA;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-azul;
+
+      }
+    }
+
+
+  }
+
+  
+  .rojiso{
+    background: #d25b5c;
+  
+
+    &_text{
+      background-color:#49A849;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $white;
+      background-color:#49A849;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-azul;
+
+      }
+    }
+  }
+  
+
+  
+  .azul{
+    background-color: #6a83c0;
+
+    &_text{
+      background-color:#FFD57F;
+      color: $black;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $black;
+      background-color:#FFD57F;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+  
+  
+  .naranja{
+    background-color: #ebb533;
+
+    &_text{
+      background-color:#3246A0;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $white;
+      background-color:#3246A0;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+  
+  
+  .morado{
+      background-color: #663288;
+
+      &_text{
+        background-color:#CBC943;
+        color: $black;
+        padding: .2rem .7rem;
+        text-transform: uppercase;
+      }
+  
+      .materia {
+        border-radius: 1rem;
+        border: solid 3px $white;
+        padding: .7rem 1rem;
+       margin-top: 1.5rem;
+        color: $black;
+        background-color:#CBC943;
+        display: block;
+        transition: all .2s;
+  
+        &:hover {
+          border: solid 3px red;
+          background-color: $color-violeta;
+  
+        }
+      }
+  }
+  
+  
+  
+  .bluegreen{
+    background-color: #7ab4b0;
+
+    &_text{
+      background-color:#FFD1AD;
+      color: $black;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $black;
+      background-color:#FFD1AD;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+
+
+  .amarillo-sol{
+      background-color: #f0c43f;
+
+      &_text{
+      background-color:#3F3FA8;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $white;
+      background-color:#3F3FA8;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+  
+  .naranja-obscuro{
+      background-color: #d2752f;
+
+      &_text{
+      background-color:#1D8277;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $white;
+      background-color:#1D8277;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+
+  
+  .violeta{
+    background-color: #b52067;
+
+    &_text{
+      background-color:#87C823;
+      color: $black;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $black;
+      background-color:#87C823;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+
+  
+  .azul-obscuro{
+      background-color: #625fa6;
+
+      &_text{
+      background-color:#EED177;
+      color: $black;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $black;
+      background-color:#EED177;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+  
+  
+  .verde{
+      background-color: #58968a;
+
+      &_text{
+      background-color:#EBB08A;
+      color: $black;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $black;
+      background-color:#EBB08A;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }
+  
+
+  .verde-limon{
+      background-color: #adcd65;
+
+      &_text{
+      background-color:#AC558A;
+      color: $white;
+      padding: .2rem .7rem;
+      text-transform: uppercase;
+    }
+
+    .materia {
+      border-radius: 1rem;
+      border: solid 3px $white;
+      padding: .7rem 1rem;
+     margin-top: 1.5rem;
+      color: $white;
+      background-color:#AC558A;
+      display: block;
+      transition: all .2s;
+
+      &:hover {
+        border: solid 3px red;
+        background-color: $color-violeta;
+
+      }
+    }
+  }

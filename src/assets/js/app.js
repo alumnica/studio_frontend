@@ -58,6 +58,12 @@ import './jplist/jplist.textbox-filter.min';
 
 import 'handlebars/dist/handlebars.min.js';
 
+// muury fro drag and drop
+
+import Muuri  from 'muuri';
+
+window.Muuri = Muuri;
+
 $(document).foundation();
 
 
