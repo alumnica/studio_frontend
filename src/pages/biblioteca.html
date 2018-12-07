@@ -1,0 +1,144 @@
+<div class="container dashboard">
+    <h1 class="title">
+        <i class="menu-image fas fa-images"></i> Biblioteca de Imagenes </h1>
+    <hr>
+    <div id="img-jplist">
+        <div class="grid-x grid-margin-x">
+            <div class="cell medium-8">
+
+            </div>
+            <div class="cell medium-4">
+                <div class="jplist-panel">
+                    <div class="input-group">
+                        <label class="busqueda-oda">Buscar: </label>
+        
+                        <input id="search-field" 
+                        data-path=".image__name, .image__category" 
+                        type="text" 
+                        value="" 
+                        class="input-group-field busqueda-input"
+                        placeholder="Buscqueda" 
+                        data-control-type="textbox" 
+                        data-control-name="title-filter" 
+                        data-control-action="filter"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x grid-margin-y small-up-2 medium-up-6 list">
+            <div class="cell img-box">
+                <div class="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="image" data-open="imgModal">
+
+
+
+                    <!-- <label for="image-01" class="check"></label>
+                    <input type="checkbox" id="image-01"> -->
+                    <div class="image__thumbnail">
+                        <img class="img_contain" src="assets/img/ph/bloque-01.png" alt="">
+                    </div>
+                    <div class="text-center">
+                        <div class="image__name">
+                            seccion1.png
+                        </div>
+                        <div class="image__category">
+                            Materia
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- no results found -->
+        <div class="jplist-no-results">
+            <p>No results found</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- {% verbatim %}
+<script id="jplist-template" type="text/x-handlebars-template">
+
+    {{#each this}}
+
+      <div class="list-item box">
+
+            <p class="titlee">{{name_field}}</p>
+
+      </div>
+
+
+
+<div class="cell img-box">
+    <div class="checkbox">
+        <input type="checkbox">
+    </div>
+    <div class="image" data-open="imgModal"> -->
+
+
+
+        <!-- <label for="image-01" class="check"></label>
+            <input type="checkbox" id="image-01">
+        <div class="image__thumbnail">
+            <img class="img_contain" src="{{file_field}} alt="">
+        </div>
+        <div class="text-center">
+            <div class="file_field">
+                seccion1.png
+            </div>
+            <div class="folder_field">
+                    {{name_field}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/each}}
+</script>
+{% endverbatim %} -->
+
+
+
+<div class="reveal large imageModal" id="imgModal" data-reveal>
+    <div class="title">
+        Detalles
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="grid-x">
+        <div class="medium-9 cell text-center">
+            <div class="image-selected">
+                <img src="../assets/img/ph/bloque-01.png" alt="bloque 1">
+            </div>
+        </div>
+        <div class="medium-3 cell">
+            <div class="image-detail">
+                <ul>
+                    <li id="nombre">Nombre:</li>
+                    <li id="fecha">Fecha:</li>
+                </ul>
+            </div>
+            <div class="image-attached">
+                <ul>
+                    <li id="adjuntoa"></li>
+                </ul>
+                <div class="bottom-buttons">
+                    <button class="button secondary">
+                        <i class="fa fa-download"></i> Descargar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

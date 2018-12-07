@@ -1,0 +1,304 @@
+<div class="dashboard container">
+    <h1 class="title">
+        <i class="fas fa-list-alt"></i> Crear nueva ODA
+    </h1>
+    <hr>
+    <form id="oda-edit" method="POST">
+        <div class="grid-x grid-margin-x ">
+            <div class="cell medium-6">
+                <label for="oda-title">Titulo</label>
+                <input type="text" name="oda-title" id="oda-title">
+
+                <!-- tags -->
+
+                <label for="tags-oda">Tags</label>
+                <input name="tags-oda" type="text" id="oda-tags" class="u-margin-bottom-small">
+
+                <!-- end tags -->
+                <div class="grid-x grid-margin-x grid-margin-y">
+                    <div class="cell medium-6">
+                        <div class="panel">
+                            <div class="panel__title">
+                                Imagen A
+                            </div>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell small-6">
+                                    <div class="oda-a-preview">
+                                        <img src="#" alt="ODA A"/>
+                                    </div>
+                                </div>
+                                <div class="cell small-6 align-self-middle">
+                                    <label for="oda-a" class="button small expanded">Subir Imagen</label>
+                                    <input id="oda-a" name="oda-a" type="file" class="show-for-sr">
+
+                                    <button type="button" class="button expanded small">
+                                        <i class="fa fa-th"></i> Imagenes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="panel">
+                            <div class="panel__title">
+                                Imagen B
+                            </div>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell small-6">
+                                    <div class="oda-b-preview">
+                                        <img src="#" alt="ODA B" />
+                                    </div>
+                                </div>
+                                <div class="cell small-6 align-self-middle">
+                                    <label for="oda-b" class="button small expanded">Subir Imagen</label>
+                                    <input id="oda-b" name="oda-b" type="file" class="show-for-sr">
+
+                                    <button type="button" class="button expanded small">
+                                        <i class="fa fa-th"></i> Imagenes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cell medium-6">
+                <div class="panel">
+                    <div class="panel__title">
+                        Asignacion de Materia a ODA actual
+                    </div>
+                    <label for="materia-a-oda">Selecciona Materia</label>
+                    <p class="oda-info">
+                        Solo se muestran materias con bloques que tengan espacios disponibles para añadir una oda
+                    </p>
+                    <select name="materia-a-oda">
+                        <option disabled selected></option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <label for="bloque-a-oda">Selecciona Bloque</label>
+                    <p class="oda-info">
+                        Solo se muestran los bloques que tengan espacio disponubles para añadir una oda.
+                    </p>
+                    <select name="bloque-a-oda">
+                        <option disabled selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button type="button" class="button secondary">
+                        <i class="fa fa-pencil-alt"></i> &nbsp; Editar la Posición de esta ODA en el bloque seleccionado
+                    </button>
+                </div>
+            </div>
+            <div class="cell medium-12">
+                <hr>
+                <p class="h6">Momentos por µODA</p>
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="apli">
+                    <div class="panel__title">
+                        Aplicación
+                        <span class="add-materia" data-open="Modal-1">
+                            <i class="fas fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="panel__content">
+                        <ul class="oda-sort" id="uoda-1">
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <label for="apli-tags">Tags</label>
+                    <input name="apli-tags" type="text" id="apli-tags">
+                </div>
+
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="forma">
+                    <div class="panel__title">
+                        Formalización
+                        <span class="add-materia" data-open="Modal-1">
+                            <i class="fas fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="panel__content">
+                        <ul class="oda-sort" id="uoda-2"></ul>
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <label for="forma-tags">Tags</label>
+                    <input name="forma-tags" type="text" id="forma-tags">
+                </div>
+
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="activ">
+                    <div class="panel__title">
+                        Activación
+                        <span class="add-materia" data-open="Modal-1">
+                            <i class="fas fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="panel__content">
+                        <ul class="oda-sort" id="uoda-3">
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <label for="activ-tags">Tags</label>
+                    <input name="activ-tags" type="text" id="activ-tags">
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="ejemp">
+                    <div class="panel__title">
+                        Ejemplificación
+                        <span class="add-materia" data-open="Modal-1">
+                            <i class="fas fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="panel__content">
+                        <ul class="oda-sort" id="uoda-4">
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <label for="ejemp-tags">Tags</label>
+                    <input name="ejemp-tags" type="text" id="ejemp-tags">
+                </div>
+
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="sens">
+                    <div class="panel__title">
+                        Sensibilzación
+                        <span class="add-materia" data-open="Modal-1">
+                            <i class="fas fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="panel__content">
+                        <ul class="oda-sort" id="uoda-5">
+
+                        </ul>
+                    </div>
+                    <hr>
+                    <label for="sens-tags">Tags</label>
+                    <input name="sens-tags" type="text" id="sens-tags">
+                </div>
+
+            </div>
+            <div class="cell medium-4">
+                <div class="panel" id="eval">
+                    <div class="panel__title">
+                        Evaluación
+                        
+                    </div>
+                    <div class="panel__content">
+                        <div  id="uoda-6">
+                            this is some evaluation
+                        </div>
+                        <hr>
+                        <div class="text-center">
+                             <label for="evaluation_file" class="button small expanded">{% trans "Upload new evaluation" %}</label>
+                        
+                            <button class="button secondary small expanded">
+                                Dwonlaod current Evaluation
+                            </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cell medium-12" id="save-on">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="apli-momentos" name="apli-momentos">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="forma-momentos" name="forma-momentos">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="activ-momentos" name="activ-momentos">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="ejem-momentos" name="ejem-momentos">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="sens-momentos" name="sens-momentos">
+                <!-- hidden input to pass momentos and order -->
+                <input type="hidden" id="eval-momentos" name="eval-momentos">
+
+
+                <button class="button">
+                    <i class="fa fa-save"></i> Guardar</button>
+                &nbsp;
+                <button class="button success">
+                    <i class="fa fa-check"></i> FINALIZAR</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+<!-- modal Aplicacion -->
+
+
+
+<div class="reveal m-adder" id="Modal-1" data-reveal>
+    <h4>Selección de Momentos</h4>
+    <br>
+
+    <label for="momentos-select">Busca en la Biblioteca de Materias</label>
+    <select name="momentos-select" id="select-momentos"></select>
+
+
+    <br />
+    <br>
+    <br>
+    <input id="momento-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="large reveal" id="Modal-2" data-reveal>
+
+    <div class="h5p-preview">
+        <iframe src="www.google.com"></iframe>
+    </div>
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="reveal" id="evalModal" data-reveal="">
+    <h4>Seleccion de Evaluaciones</h4>
+    <br>
+
+    <label for="eval-select">Busca en la Biblioteca de Evaluaciones</label>
+    <select name="eval-select" id="eval-select">
+        <option value=""></option>
+        <option value="Evaluación 1">Evaluación 1</option>
+        <option value="Evaluación 2">Evaluación 2</option>
+    </select>
+
+
+    <br />
+    <br>
+    <br>
+    <input id="eval-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+</div>
+
+<!-- makes sidebar menu active -->
+<script>
+    document.querySelector('#oda-nav').classList.add("is-active");
+</script>

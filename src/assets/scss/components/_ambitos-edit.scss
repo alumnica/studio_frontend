@@ -1,0 +1,305 @@
+.position-ambito-size{
+    width: 100px;
+    display: block;
+    
+}
+
+// color circles
+
+.color-radio {
+
+  input {
+      display: none;
+  }
+
+  label{
+      display: inline-block;
+  }
+
+}
+
+.color-circle {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px 5px 10px;
+  cursor: pointer;
+
+  span {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      background: #eeeeee;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      // transition: ease .3s;
+
+      &:hover {
+          width: 50px;
+          height: 50px
+        }
+    }
+
+}
+
+.radio-input:checked ~ .color-circle span{
+  border: solid 3px $white;
+  width: 50px;
+          height: 50px
+}
+
+.amarillo .color-circle span {
+  background: #fae96a;
+}
+
+.rojiso .color-circle span {
+  background: #d25b5c;
+}
+
+.azul .color-circle span {
+  background-color: #6a83c0;
+}
+
+.naranja .color-circle span {
+  background-color: #ebb533;
+}
+
+.morado .color-circle span {
+    background-color: #663288;
+}
+
+.bluegreen .color-circle span {
+  background-color: #7ab4b0;
+}
+
+.amarillo-sol .color-circle span {
+    background-color: #f0c43f;
+}
+
+.naranja-obscuro .color-circle span {
+    background-color: #d2752f;
+}
+
+.violeta .color-circle span {
+  background-color: #b52067;
+}
+
+.azul-obscuro .color-circle span {
+    background-color: #625fa6;
+}
+
+.verde .color-circle span {
+    background-color: #58968a;
+}
+
+.verde-limon .color-circle span {
+    background-color: #adcd65;
+}
+
+
+
+
+
+//image preview
+
+.image-wrapper {
+  
+  position: relative;
+  
+  width:270px;
+  margin: 0 auto;
+  border: solid 1px $medium-gray;
+ 
+ 
+}
+
+#image-holder {
+  
+  // width: 100%;
+  min-height: 100px;
+  // border: solid 1px $medium-gray;
+}
+
+.ambito-cover {
+    width: 270px;  
+  object-fit: cover;
+}
+
+.thumb-image {
+  width:230px;
+  z-index: 1;
+}
+
+#ttc {
+  position: absolute;
+  bottom: 5%;
+  right: auto;
+}
+
+.ttc2 {
+  padding: .2rem .5rem .2rem .5rem;
+}
+
+.amarillo_bg {
+  background-color: #fae96a;
+}
+
+.amarillo_text {
+ background-color:#7252AA;
+ color: $white;
+}
+
+.rojiso_bg{
+  background: #d25b5c;
+}
+
+.rojiso_text {
+  background-color: #49A849;
+  color: white
+}
+
+.azul_bg{
+  background-color: #6a83c0;
+}
+
+.azul_text{
+  background-color: #FFD57F;
+  color: black;
+}
+
+.naranja_bg{
+  background-color: #ebb533;
+}
+
+.naranja_text{
+  background-color: #3246A0;
+  color: $white;
+}
+
+.morado_bg{
+    background-color: #663288;
+}
+
+.morado_text{
+  background-color: #CBC943;
+  color: black;
+}
+
+.bluegreen_bg{
+  background-color: #7ab4b0;
+}
+
+.bluegreen_text{
+  background-color: #FFD1AD;
+  color: black;
+}
+
+.amarillo-sol_bg{
+    background-color: #f0c43f;
+}
+
+.amarillo-sol_text{
+  background-color: #3F3FA8;
+  color: $white;
+}
+
+.naranja-obscuro_bg{
+    background-color: #d2752f;
+}
+
+.naranja-obscuro_text{
+  background-color: #1D8277;
+  color: $white;
+}
+
+.violeta_bg{
+  background-color: #b52067;
+}
+
+.violeta_text{
+  background-color: #87C823;
+  color: black;
+}
+
+.azul-obscuro_bg{
+    background-color: #625fa6;
+}
+
+.azul-obscuro_text{
+  background-color: #EED177;
+  color: black;
+}
+
+.verde_bg{
+    background-color: #58968a;
+}
+
+.verde_text{
+  background-color: #EBB08A;
+  color: black;
+}
+
+.verde-limon_bg{
+    background-color: #adcd65;
+}
+
+.verde-limon_text{
+  background-color: #AC558A;
+  color: $white;
+}
+
+
+#sortable {
+  list-style-type: none;
+  margin: 0;
+  
+  
+}
+
+ #sortable li {
+ margin: .5rem;
+ position: relative;
+ padding: .5rem;
+ padding-left: 1.5em;
+ }
+
+#sortable li .sorter {
+  position: absolute;
+  margin-left: -1.3em;
+}
+
+.add-materia {
+  float: right;
+  font-size: 2rem;
+  margin-top: -.5rem;
+
+  a{
+      &:hover{
+        color: lighten($primary-color, 20%);
+      }
+  }
+
+  // &:hover {
+  //   cursor: pointer;
+  //   transform: translateY(-2px);
+  //   transition: all .2s;
+  // }
+  // &:active {
+  // transform: translateY(0);
+  // }
+ 
+}
+
+.remove_materia {
+  float: right;
+}
+

@@ -1,0 +1,198 @@
+.left-border {
+    
+    
+   @include breakpoint(medium){
+        border-right: $light-gray solid 1px
+   }
+}
+
+
+.section-preview{
+    border: solid 1px $medium-gray;
+    min-height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.materia-preview{
+    border: solid 1px $medium-gray;
+    height: 100px;
+    width: 350px;
+    margin: 0 auto;
+    
+    img{
+        height: 100%;
+        object-fit: contain;  
+    }
+}
+
+.materia-cover {
+ height: 150px;
+ width: 100%;  
+  object-fit: cover;
+}
+
+
+// drag and drop area
+
+.canvas {
+    
+    background-size: cover;
+    max-width: 310px;
+
+
+}
+
+
+.frame {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    
+
+    .dropzone {
+        flex: 1;
+        height: 125px;
+       
+        border: dashed 1px rgb(185, 185, 185);
+    }
+}
+
+
+.oda-list {
+    list-style: none;
+    margin: 0;
+    position: relative;
+}
+
+.oda-block{
+    position: relative;
+    background-color: $white;
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    float: left;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 130px;
+    margin: 2rem 1rem 2rem 1rem;
+    // &-img{
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     padding: .3rem;
+    //     opacity: .3;;
+    // }
+
+    
+}
+
+
+.block {
+    // background-color: gray;
+    position: absolute;
+    top: 10;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    height: 125px;
+    // background: rgba(150, 40, 40, .4);
+    // display: inline-block;
+    // transition: all .5s;
+    padding: .3rem;
+    position: relative;
+    
+   
+    img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .return-button {
+        background-color: red;
+        border: solid 1px $darker-gray;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        font-size: .6rem;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        display: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        cursor:grab;
+        .return-button {
+            display: block;
+        }
+    }
+}
+
+
+.shadow-block {
+    // pointer-events:none;
+    position: absolute;
+    top: 0;
+    // z-index: -10;
+    width: 72px;
+    @include breakpoint(large){
+        width: 75px;
+    }
+    padding: .3rem;
+    height: 125px;
+    opacity: .4;
+    // background-color: blue;
+
+    img{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+
+
+.dropzone .block .oda-desc {
+    display: none;
+}
+
+.dropOn{ 
+    background-color: rgba(53, 153, 247, 0.445);
+}
+
+.drop-hover{
+    background-color: rgba(3, 202, 3, 0.493);
+}
+
+.oda-desc {
+    font-size: .8rem;
+    background-color: $light-gray;
+    text-align: center;
+
+    position: absolute;
+    top: 100%;
+    ;
+}
+
+.bloque-add-button {
+    background-color: $primary-color;
+    color: $white;
+    padding: 1rem;
+    border-radius: 3px;
+    transition: all .2s;
+    &:hover {
+        background-color: darken($primary-color, 15%);
+        cursor: pointer;
+    }
+}
+
+
+
+

@@ -1,0 +1,82 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumnica Content Creation Studio</title>
+  <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  <link rel="icon" href="../assets/img/alumnica-favico.png" type="image/png" sizes="16x16">
+  
+</head>
+
+<body>
+  <div class="off-canvas position-left" id="offCanvas" data-transition="detached" data-off-canvas>
+      <!-- Your menu or Off-canvas content goes here -->
+      {{>mobile-menu}}
+  </div>
+  <div class="off-canvas-content" data-off-canvas-content>
+
+    <div class="grid-y grid-frame">
+      <div class="cell shrink cell-block-container hide-for-small-only">
+        {{>top-bar}}
+      </div>
+      <div class="cell shrink cell-block-container show-for-small-only">
+        {{>title-bar-mobile}}
+      </div>
+      <div class="cell auto cell-block-container">
+        <div class="grid-x">
+          <div class="cell  cell-block-y hide-for-small-only sidebar-menu">
+            {{>side-bar-menu}}
+          </div>
+          <div class="cell auto cell-block-y">
+            
+            {{> body}}
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="{{root}}assets/js/app.js"></script>
+  <script src="{{root}}assets/js/main.js"></script>
+  
+  {{#ifpage 'materias-edit'}}
+  <script src="{{root}}assets/js/materias.js"></script>
+  {{/ifpage}}
+  <script src="{{root}}assets/js/tags.js"></script>
+
+  {{#ifpage 'materias-edit-position'}}
+  <script src="{{root}}assets/js/odas_position.js"></script>
+  {{/ifpage}}
+
+  {{#ifpage 'oda-edit'}}
+  <script src="{{root}}assets/js/momentos.js"></script>
+  {{/ifpage}}
+  {{#ifpage 'momentos'}}
+  <script src="{{root}}assets/js/theMoments.js"></script>
+  {{/ifpage}}
+  {{#ifpage 'momentos-edit'}}
+  <script src="{{root}}assets/js/theMoments.js"></script>
+  {{/ifpage}}
+  {{#ifpage 'drag-drop'}}
+  <script src="{{root}}assets/js/drag-drop.js"></script>
+  {{/ifpage}}
+  {{#ifpage 'supervisor-vp-materia'}}
+  <script src="{{root}}assets/js/vp-materia.js"></script>
+  {{/ifpage}}
+  {{#ifpage 'oda-edit'}}
+  <script src="{{root}}assets/js/odas-edit.js"></script>
+  {{/ifpage}}
+  <!-- {{#ifpage 'biblioteca'}}
+  <script src="{{root}}assets/js/bib.js"></script>
+  {{/ifpage}} -->
+  
+</body>
+
+</html>

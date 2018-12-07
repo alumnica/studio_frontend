@@ -1,0 +1,232 @@
+<div class="dashboard container">
+    <h1 class="title">Crear nuevo ámbito</h1>
+    <hr>
+    <!-- start grid-x -->
+    <div class="grid-x">
+        <!-- instrucciones -->
+        <div class="cell medium-12">
+            <p class="h5">Instrucciones:</p>
+            <p>Lorem ipsum dolor sit amet. 
+            </p>
+            <hr>
+        </div>
+        <!-- end columnda de einstruccioones -->
+        <div class="cell medium-12">
+            <!-- start form -->
+            <form method="POST" id="ambito-creation">
+                <div class="grid-x grid-margin-x">
+                    <!-- start first column -->
+                    <div class="cell medium-5">
+                        <label for="titulo-ambito-nuevo">Titulo</label>
+                        <input type="text" placeholder="titulo" id="id_name_field">
+
+                        <!-- tags -->
+
+                        <label for="tags-ambito">Tags</label>
+                        <input name="tags-ambito" type="text" id="ambito-tags">
+
+                        <!-- end tags -->
+
+                        <label>Posición
+                            <select class="position-ambito-size">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </label>
+
+                        <!-- start color select -->
+                        <fieldset id="color-button" class="fieldset color-radio">
+                            <legend>Color de Fondo</legend>
+                            <label class="amarillo">
+                                <input type="radio" name="color" value="#fae96a" class="radio-input" data-a="amarillo_bg" data-b="amarillo_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="rojiso">
+                                <input type="radio" name="color" value="#d25b5c" class="radio-input" data-a="rojiso_bg" data-b="rojiso_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="azul">
+                                <input type="radio" name="color" value="#6a83c0" class="radio-input" data-a="azul_bg" data-b="azul_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="naranja">
+                                <input type="radio" name="color" value="#ebb533" class="radio-input" data-a="naranja_bg" data-b="naranja_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="morado">
+                                <input type="radio" name="color" value="#663288" class="radio-input" data-a="morado_bg" data-b="morado_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="bluegreen">
+                                <input type="radio" name="color" value="#7ab4b0" class="radio-input" data-a="bluegreen_bg" data-b="bluegreen_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="amarillo-sol">
+                                <input type="radio" name="color" value="#f0c43f" class="radio-input" data-a="amarillo-sol_bg" data-b="amarillo-sol_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="naranja-obscuro">
+                                <input type="radio" name="color" value="#d2752f" class="radio-input" data-a="naranja-obscuro_bg" data-b="naranja-obscuro_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="violeta">
+                                <input type="radio" name="color" value="#b52067" class="radio-input" data-a="violeta_bg" data-b="violeta_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="azul-obscuro">
+                                <input type="radio" name="color" value="#625fa6" class="radio-input" data-a="azul-obscuro_bg" data-b="azul-obscuro_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="verde">
+                                <input type="radio" name="color" value="#58968a" class="radio-input" data-a="verde_bg" data-b="verde_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+
+                            <label class="verde-limon">
+                                <input type="radio" name="color" value="#adcd65" class="radio-input" data-a="verde-limon_bg" data-b="verde-limon_text">
+                                <div class="color-circle">
+                                    <span></span>
+                                </div>
+                            </label>
+                        </fieldset>
+                        <!-- end color select -->
+                        <div class="panel">
+                            <div class="panel__title">
+                                Imagen de Ambito
+                            </div>
+                            <!-- botones -->
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell small-6">
+                                    <!-- <label for="ambito-u" class="button expanded">Subir Imagen</label> -->
+                                    <!-- <input id="ambito-u" name="ap" type="file" class="show-for-sr"> -->
+                                    <label for="ambito-u" class="button expanded">Subir Imagen</label>
+                                    <input id="ambito-u" name="ap" type="file" class="is-hidden">
+                                </div>
+                                <div class="cell small-6">
+                                    <a href="#" class="button expanded">Biblioteca de Imagenes</a>
+                                </div>
+                            </div>
+                            <!-- end botones -->
+
+                            <!-- start image preview -->
+                            <div class="image-wrapper">
+                                <div id="image-holder">
+                                    <img  src="#" alt="">
+                                </div>
+                                <div id="ttc">
+                                    <span class="ttc2">Tituo de Ambito</span>
+                                </div>
+                            </div>
+                                <!-- end image previe -->
+                        </div>
+                    </div>
+                    <!-- end first column -->
+
+                    <!-- start second column -->
+                    <div class="cell medium-5 medium-offset-1">                        
+                        <!-- sortable materias -->
+                        <div class="panel" id="materias_panel">
+                            <div class="panel__title">
+                                <i class="fas fa-clone"></i> Materias Asignadas
+                                <span id="add-materia-button" class="add-materia" data-open="exampleModal1">
+                                    <i class="fas fa-plus-square"></i>
+                                </span>
+                            </div>
+                            <ul id="sortable">
+                                <!-- <li id="mat_1" class="ui-state-default">
+                                    <span class="ui-icon ui-icon-arrowthick-2-n-s sorter"></span>Item 1
+                                    <span class="remove_materia">
+                                        <a href="#">
+                                            <i class="fas fa-minus-square"></i>
+                                        </a>
+                                    </span>
+                                </li> -->                          
+                            </ul>
+                        </div>
+                        <!-- hidden input to pass materias and order -->
+                        <input type="hidden" id="class_name">
+                        <!-- end sortable materias -->
+                        <div class="panel" id="last_panel">
+                            <div class="panel__title">Detalles de publicación</div>
+                            <p>
+                                <strong>Estado:</strong> Sin Publicar</p>
+                            <p>
+                                <strong>Publicado:</strong> N/A</p>
+                            
+                            <div class="text-right">
+                                <button type="submit" class="button primary">Publicar</button>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__title">
+                                Publicar en EVA
+                            </div>
+                            <p>Al publicar la materia será añadida a el EVA en su forma actual.
+                                Favor de checar que los bloques, sus ODAs y momentos se hayan añadido correctamente</p>
+                            <div class="text-right">
+                                <button class="button success"><i class="fas fa-check"></i> Publicar en EVA</button>
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- end seond column -->
+                </div>
+            </form>
+            <!-- end form-->
+        </div>
+    </div>
+    <!-- end grid-x -->
+</div>
+
+ <!-- modal -->
+
+ <div class=" reveal" id="exampleModal1" data-reveal>
+        <h4>Selección de Materias</h4>
+        <br>
+
+        <label for="materias-select">Busca en la Biblioteca de Materias</label>
+        <select name="materias-select" id="select-materias"></select>
+
+        
+        <br />
+        <br>
+        <br>
+        <input id="class-adder" class='button expanded' type='submit' disabled value='Añadir' data-close/>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
